@@ -35,36 +35,64 @@
 			</div>
 		</header>
 		<main class="container">
-			<section class="products-slider">
-				<input type="radio" id="btn-1" name="toggle" checked>
-                <input type="radio" id="btn-2" name="toggle">
-                <input type="radio" id="btn-3" name="toggle">
-                <div class="slider-controls">
-                    <label for="btn-1"></label>
-                    <label for="btn-2"></label>
-                    <label for="btn-3"></label>
-                </div>
-				<div class="slider-inner">
-					<div class="slider-slides">
-						<div class="slider-slide">
-							<p class="product-name">Крем-брюле и пломбир с малиновым джемом</p>
-							<a href="#" class="btn slider-btn">Давайте оба!</a>
-						</div>
+			<ul class="breadcrumbs">
+				<li>
+					<a href="#">Главная</a>
+				</li>
+				<li>
+					<a href="#">Каталог</a>
+				</li>
+				<li>
+					<a href="#" class="disabled">Сливочное</a>
+				</li>
+			</ul>
+			<h1 class="main-title">Сливочное мороженое</h1>
+			<form class="filter" action="https://echo.htmlacademy.ru" method="post">
+				<fieldset class="first-line">
+					<div class="filter-sort">
+						<span class="filter-title">Сортировка:</span>
+						<select name="sort">
+							<option value="popular">по популярности</option>
+							<option value="cheap-first">сначала недорогие</option>
+							<option value="expensive-first">сначала дорогие</option>
+							<option value="fatness">по жирности</option>
+						</select>
 					</div>
-				</div>
-			</section>
-			<section class="promo-actions">
-				<article class="promo promo-rasberry">
-					<h1 class="promo-title">Малинка даром!</h1>
-					<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-					<a href="#" class="btn promo-btn">Хочу варенье!</a>
-				</article>
-				<article class="promo promo-choco">
-					<h1 class="promo-title">Шоколадки даром!</h1>
-					<p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-					<a href="#" class="btn promo-btn">Хочу шоколадки!</a>
-				</article>
-			</section>
+					<div class="filter-price">
+						<span class="filter-title">
+							Цена: <span id="min-price">100</span> руб. – <span id="max-price">500</span> руб.
+						</span>
+						<input type="range" min="0" max="800" name="price" multiple>
+					</div>
+					<div class="filter-fatness">
+						<span class="filter-title">Жирность:</span>
+						<input type="radio" name="fatness" value="zero" id="zero">
+						<label for="zero">0%</label>
+						<input type="radio" name="fatness" value="less-ten" id="less-ten" checked>
+						<label for="less-ten">до 10%</label>
+						<input type="radio" name="fatness" value="less-thirty" id="less-thirty">
+						<label for="less-thirty">до 30%</label>
+						<input type="radio" name="fatness" value="more-thirty" id="more-thirty">
+						<label for="more-thirty">выше 30%</label>
+					</div>
+				</fieldset>
+				<fieldset class="second-line">
+					<div class="filter-topping">
+						<span class="filter-title">Наполнители:</span>
+						<input type="checkbox" name="topping" value="choco" id="choco" checked>
+						<label for="choco">шоколадные</label>
+						<input type="checkbox" name="topping" value="sugar" id="sugar" checked>
+						<label for="sugar">сахарные присыпки</label>
+						<input type="checkbox" name="topping" value="fruits" id="fruits">
+						<label for="fruits">фрукты</label>
+						<input type="checkbox" name="topping" value="syrop" id="syrop">
+						<label for="syrop">сиропы</label>
+						<input type="checkbox" name="topping" value="jam" id="jam">
+						<label for="jam">джемы</label>
+					</div>
+					<button class="btn filter-btn">Применить</button>
+				</fieldset>
+			</form>
 			<section class="catalog">
 				<article class="product hit-product">
 					<a class="product-photo" href="#">
@@ -102,45 +130,111 @@
 					</a>
 					<span class="product-price">415 р/кг</span>
 				</article>
-			</section>
-			<section class="seo-content">
-				<p class="seo-title">Магазин Глейси  — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</p>
-				<div class="seo-content-left">
-					<p>
-						Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
-					</p>
-					<p>
-						Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. 
-					</p>
-				</div>
-				<div class="seo-content-right">
-					<p>
-						Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
-					</p>
-					<p>
-						Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, которая не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.
-					</p>
-				</div>
-			</section>
-			<section class="news">
-				<article class="news-blog">
-					<p>Новое в нашем блоге</p>
-					<a class="post-title" href="#">10  способов сервировки фруктовых щербетов к столу</a>
+				<article class="product hit-product">
+					<a class="product-photo" href="#">
+						<img src="img/product5.png" alt="" width="270" height="270">
+					</a>
+					<a class="product-name" href="#">
+						Сливочное с брусничным джемом
+					</a>
+					<span class="product-price">325 р/кг</span>
 				</article>
-				<article class="news-subscribe">
-					<p>
-						Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) 
-					</p>
-					<form action="https://echo.htmlacademy.ru" method="post">
-						<input type="email" placeholder="Электронная почта">
-						<button type="submit" class="btn news-btn">Отправить</button>
-					</form>
+				<article class="product hit-product">
+					<a class="product-photo" href="#">
+						<img src="img/product6.png" alt="" width="270" height="270">
+					</a>
+					<a class="product-name" href="#">
+						Сливочно-черничное с цельными ягодами черники 
+					</a>
+					<span class="product-price">410 р/кг</span>
+				</article>
+				<article class="product hit-product">
+					<a class="product-photo" href="#">
+						<img src="img/product7.png" alt="" width="270" height="270">
+					</a>
+					<a class="product-name" href="#">
+						Сливочно-лимонное с карамельной присыпкой
+					</a>
+					<span class="product-price">375 р/кг</span>
+				</article>
+				<article class="product hit-product">
+					<a class="product-photo" href="#">
+						<img src="img/product8.png" alt="" width="270" height="270">
+					</a>
+					<a class="product-name" href="#">
+						Сливочное с шоколадной стружкой
+					</a>
+					<span class="product-price">320 р/кг</span>
+				</article>
+				<article class="product hit-product">
+					<a class="product-photo" href="#">
+						<img src="img/product9.png" alt="" width="270" height="270">
+					</a>
+					<a class="product-name" href="#">
+						Сливочно-ванильное с кусочками шоколада
+					</a>
+					<span class="product-price">440 р/кг</span>
+				</article>
+				<article class="product hit-product">
+					<a class="product-photo" href="#">
+						<img src="img/product10.png" alt="" width="270" height="270">
+					</a>
+					<a class="product-name" href="#">
+						Сливочноe с ментоловым сиропом
+					</a>
+					<span class="product-price">435 р/кг</span>
+				</article>
+				<article class="product hit-product">
+					<a class="product-photo" href="#">
+						<img src="img/product11.png" alt="" width="270" height="270">
+					</a>
+					<a class="product-name" href="#">
+						Сливочное с кусочками черного шоколада
+					</a>
+					<span class="product-price">355 р/кг</span>
+				</article>
+				<article class="product hit-product">
+					<a class="product-photo" href="#">
+						<img src="img/product12.png" alt="" width="270" height="270">
+					</a>
+					<a class="product-name" href="#">
+						Сливочное с мятным сиропом
+					</a>
+					<span class="product-price">420 р/кг</span>
 				</article>
 			</section>
-			<section class="map">
-				
+			<section class="paginator">
+				<ul class="pages">
+					<li class="page active">
+						<a href="#">1</a>
+					</li>
+					<li class="page">
+						<a href="#">2</a>
+					</li>
+					<li class="page">
+						<a href="#">3</a>
+					</li>
+					<li class="page">
+						<a href="#">4</a>
+					</li>
+					<li class="page">
+						<a href="#">5</a>
+					</li>
+				</ul>
 			</section>
 		</main>
+		<aside class="map">
+			<div class="container">
+				<div class="map-contacts">
+					Адрес главного офиса и офлайн магазина:
+					<span class="contacts-info">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
+					Для заказов по телефону:
+					<span class="contacts-info">8 812 450-25-25</span>
+					(с 10 до 20 ежедневно)
+					<a href="#" class="btn map-contacts-btn">Форма обратной связи</a>
+				</div>
+			</div>
+		</aside>
 		<footer class="main-footer">
 			<section class="footer-social">
 				<a class="social-btn social-btn-tw" href="#">Твиттер</a>
