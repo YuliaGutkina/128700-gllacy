@@ -1,0 +1,15 @@
+body {
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 16px;
+	line-height: 22px;
+	color: #5a5a5a; /* или так-то белый цвет, да? тогда надо сразу бэкграунд у боди прописывать :) */
+	font-weight: normal;
+}
+
+h1{
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 35px;
+	line-height: 30px;
+	color: #5a5a5a;
+	font-weight: normal;
+}
