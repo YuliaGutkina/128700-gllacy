@@ -60,10 +60,14 @@
 						</select>
 					</div>
 					<div class="filter-price">
-						<span class="filter-title">
-							Цена: <span id="min-price">100</span> руб. – <span id="max-price">500</span> руб.
-						</span>
-						<input type="range" min="0" max="800" name="price" multiple>
+						<div class="filter-title price-controls">
+							Цена: <input class="min-price" type="text" value="100"> руб. – <input class="max-price" type="text" value="500"> руб.
+						</div>
+						<div class="range-controls">
+							<div class="scale"><div style="width:70%;" class="bar"></div></div>
+							<div class="toggle min-toggle"></div>
+							<div class="toggle max-toggle"></div>
+						</div>
 					</div>
 					<div class="filter-fatness">
 						<span class="filter-title">Жирность:</span>
