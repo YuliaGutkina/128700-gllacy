@@ -24,18 +24,20 @@
 						</li>
 					</ul>
 				</nav>
-				<div class="user-block">
-					<a href="#" class="search"></a>
-					<a href="#" class="login">Вход</a>
-					<a href="#" class="cart">Пусто</a>
-				</div>
-				<div class="header-contacts">
-					<span>С 10 до 20, ежедневно</span>
-					<span class="contact-number">8 812 450-25-25</span>
+				<div class="header-right">
+					<div class="header-buttons">
+						<a href="#" class="search"></a>
+						<a href="#" class="login">Вход</a>
+						<a href="#" class="cart">Пусто</a>
+					</div>
+					<div class="header-contacts">
+						<span>С 10 до 20, ежедневно</span>
+						<span class="contact-number">8 812 450-25-25</span>
+					</div>
 				</div>
 			</div>
 		</header>
-		<main class="container">
+		<div class="page-content container">
 			<section class="products-slider">
 				<input type="radio" id="btn-1" name="toggle" checked>
                 <input type="radio" id="btn-2" name="toggle">
@@ -54,7 +56,9 @@
 					</div>
 				</div>
 			</section>
-			<section class="promo-actions">
+		</div>
+		<main>
+			<section class="promo-list">
 				<article class="promo promo-rasberry">
 					<h1 class="promo-title">Малинка даром!</h1>
 					<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -66,7 +70,7 @@
 					<a href="#" class="btn promo-btn">Хочу шоколадки!</a>
 				</article>
 			</section>
-			<section class="catalog">
+			<section class="product-list">
 				<article class="product hit-product">
 					<a class="product-photo" href="#">
 						<img src="img/product1.png" alt="" width="270" height="270">
@@ -104,36 +108,38 @@
 					<span class="product-price">415 р/кг</span>
 				</article>
 			</section>
-			<section class="seo-content">
-				<p class="seo-title">Магазин Глейси  — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</p>
-				<div class="seo-content-left">
-					<p>
-						Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
-					</p>
-					<p>
-						Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. 
-					</p>
-				</div>
-				<div class="seo-content-right">
-					<p>
-						Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
-					</p>
-					<p>
-						Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, которая не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.
-					</p>
-				</div>
+			<section class="feature-list">
+				<p  class="feature-title">
+					Магазин Глейси  — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес
+				</p>
+				<p class="feature">
+					<span class="feature-icon"></span>
+					Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+				</p>
+				<p class="feature">
+					<span class="feature-icon"></span>
+					Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. 
+				</p>
+				<p class="feature">
+					<span class="feature-icon"></span>
+					Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+				</p>
+				<p class="feature">
+					<span class="feature-icon"></span>
+					Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, которая не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.
+				</p>
 			</section>
-			<section class="news">
-				<article class="news-blog">
+			<section class="news-list">
+				<article class="news-item news-blog">
 					<p>Новое в нашем блоге</p>
 					<a class="post-title" href="#">10  способов сервировки фруктовых щербетов к столу</a>
 				</article>
-				<article class="news-subscribe">
+				<article class="news-item news-subscribe">
 					<p>
 						Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) 
 					</p>
 					<form action="https://echo.htmlacademy.ru" method="post">
-						<input type="email" placeholder="Электронная почта">
+						<input type="email" placeholder="Электронная почта" name="email">
 						<button type="submit" class="btn news-btn">Отправить</button>
 					</form>
 				</article>
@@ -152,30 +158,28 @@
 			</div>
 		</aside>
 		<footer class="main-footer">
-			<section class="footer-social">
-				<a class="social-btn social-btn-tw" href="#">Твиттер</a>
-				<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
-				<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-				<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-			</section>
-			<section class="footer-info">
-				<div class="column-1">
-					<a href="#">Для поставщиков</a>
-					<a href="#">О производстве</a>
-				</div>
-				<div class="column-2">
-					<a href="#">Наши документы</a>
-					<a href="#">Экологические стандарты</a>
-				</div>
-			</section>
-			<section class="footer-copyright">
-				<a href="" class="copyright-logo">
-					<img src="img/htmlacademy.svg" alt="HTML Academy" width="108" height="37">
-				</a>
-				<span class="footer-title">
-					Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2016
-				</span>
-			</section>
+			<div class="container">
+				<section class="footer-social">
+					<a class="social-btn social-btn-tw" href="#">Твиттер</a>
+					<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+					<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+					<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+				</section>
+				<section class="footer-info">
+						<a href="#">Для поставщиков</a>
+						<a href="#">О производстве</a>
+						<a href="#">Наши документы</a>
+						<a href="#">Экологические стандарты</a>
+				</section>
+				<section class="footer-copyright">
+					<a href="" class="copyright-logo">
+						<img src="img/htmlacademy.svg" alt="HTML Academy" width="108" height="37">
+					</a>
+					<span class="footer-title">
+						Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2016
+					</span>
+				</section>
+			</div>
 		</footer>
 	</body>
 </html>

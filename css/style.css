@@ -1,3 +1,14 @@
+
+
+.clearfix::before,
+.clearfix::after,
+.container::before,
+.container::after {
+    content:'';
+    display:table;
+    clear:both;
+}
+
 body {
 	font-family: 'Roboto', Arial, sans-serif;
 	font-size: 16px;
@@ -13,3 +24,4 @@ h1{
 	color: #5a5a5a;
 	font-weight: normal;
 }
+
