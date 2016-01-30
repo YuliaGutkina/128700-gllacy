@@ -13,7 +13,7 @@
 				</a>
 				<nav class="main-navigation">
 					<ul>
-						<li>
+						<li class="active">
 							<a href="#">Каталог</a>
 						</li>
 						<li>
@@ -37,7 +37,7 @@
 				</div>
 			</div>
 		</header>
-		<div class="page-content container">
+		<div class="container">
 			<ul class="breadcrumbs">
 				<li>
 					<a href="#">Главная</a>
@@ -54,18 +54,20 @@
 				<fieldset class="filter-row">
 					<div class="filter-item filter-sort">
 						<label for="sort" class="filter-title">Сортировка:</label>
-						<select name="sort" id="sort">
-							<option value="popular">по популярности</option>
-							<option value="cheap-first">сначала недорогие</option>
-							<option value="expensive-first">сначала дорогие</option>
-							<option value="fatness">по жирности</option>
-						</select>
+						<div class="filter-bg">
+							<select name="sort" id="sort" value="">
+								<option value="popular">по популярности</option>
+								<option value="cheap-first">сначала недорогие</option>
+								<option value="expensive-first">сначала дорогие</option>
+								<option value="fatness">по жирности</option>
+							</select>
+						</div>
 					</div>
 					<div class="filter-item filter-price">
 						<label class="filter-title price-controls">
 							Цена: <input class="min-price" type="text" value="100"> руб. – <input class="max-price" type="text" value="500"> руб.
 						</label>
-						<div class="range-controls">
+						<div class="filter-bg range-controls">
 							<div class="scale"><div style="width:70%;" class="bar"></div></div>
 							<div class="toggle min-toggle"></div>
 							<div class="toggle max-toggle"></div>
@@ -73,31 +75,35 @@
 					</div>
 					<div class="filter-item filter-fatness">
 						<span class="filter-title">Жирность:</span>
-						<input type="radio" name="fatness" value="zero" id="zero">
-						<label for="zero">0%</label>
-						<input type="radio" name="fatness" value="less-ten" id="less-ten" checked>
-						<label for="less-ten">до 10%</label>
-						<input type="radio" name="fatness" value="less-thirty" id="less-thirty">
-						<label for="less-thirty">до 30%</label>
-						<input type="radio" name="fatness" value="more-thirty" id="more-thirty">
-						<label for="more-thirty">выше 30%</label>
+						<div class="filter-bg">
+							<input type="radio" name="fatness" value="zero" id="zero">
+							<label for="zero">0%</label>
+							<input type="radio" name="fatness" value="less-ten" id="less-ten" checked>
+							<label for="less-ten">до 10%</label>
+							<input type="radio" name="fatness" value="less-thirty" id="less-thirty">
+							<label for="less-thirty">до 30%</label>
+							<input type="radio" name="fatness" value="more-thirty" id="more-thirty">
+							<label for="more-thirty">выше 30%</label>
+						</div>
 					</div>
 				</fieldset>
 				<fieldset class="filter-row">
 					<div class="filter-item filter-topping">
 						<span class="filter-title">Наполнители:</span>
-						<input type="checkbox" name="topping" value="choco" id="choco" checked>
-						<label for="choco">шоколадные</label>
-						<input type="checkbox" name="topping" value="sugar" id="sugar" checked>
-						<label for="sugar">сахарные присыпки</label>
-						<input type="checkbox" name="topping" value="fruits" id="fruits">
-						<label for="fruits">фрукты</label>
-						<input type="checkbox" name="topping" value="syrop" id="syrop">
-						<label for="syrop">сиропы</label>
-						<input type="checkbox" name="topping" value="jam" id="jam">
-						<label for="jam">джемы</label>
+						<div class="filter-bg">
+							<input type="checkbox" name="topping" value="choco" id="choco" checked>
+							<label for="choco">шоколадные</label>
+							<input type="checkbox" name="topping" value="sugar" id="sugar" checked>
+							<label for="sugar">сахарные присыпки</label>
+							<input type="checkbox" name="topping" value="fruits" id="fruits">
+							<label for="fruits">фрукты</label>
+							<input type="checkbox" name="topping" value="syrop" id="syrop">
+							<label for="syrop">сиропы</label>
+							<input type="checkbox" name="topping" value="jam" id="jam">
+							<label for="jam">джемы</label>
+						</div>
 					</div>
-					<button class="btn filter-btn">Применить</button>
+					<button class="btn filter-btn filter-bg">Применить</button>
 				</fieldset>
 			</form>
 			<main class="catalog">
