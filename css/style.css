@@ -1,4 +1,6 @@
-
+div, section, article, nav, aside, main, h1, ul, img {
+	outline: 1px solid green;
+}
 
 .clearfix::before,
 .clearfix::after,
@@ -7,6 +9,10 @@
     content:'';
     display:table;
     clear:both;
+}
+
+* {
+	box-sizing: border-box
 }
 
 body {
@@ -25,3 +31,167 @@ h1{
 	font-weight: normal;
 }
 
+.container {
+	width: 900px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+.main-header {
+	margin-bottom: 25px; /* пока что, так в каталоге */
+}
+
+.header-logo {
+	float: left;
+	width: 154px;
+}
+
+.header-right {
+	float: right;
+	width: 300px;
+}
+
+.main-navigation {
+	overflow: hidden;
+}
+
+.products-slider {
+	height: 595px; /* это высота самой больщой мороженки, без подсветки*/
+}
+
+.promo-list {
+	margin-bottom: 40px;
+}
+
+.promo {
+	min-height: 210px;
+	width: 420px;
+	padding: 20px;
+}
+
+.promo-rasberry {
+	float: left;
+}
+
+.promo-choco {
+	float: right;
+}
+
+.product-list {
+	font-size: 0;
+}
+
+.product {
+	display: inline-block;
+	vertical-align: top;
+	width: 200px;
+	min-height: 275px;
+	margin-right: 20px;
+	margin-bottom: 40px;
+	font-size: 16px;
+}
+
+.product:nth-child(4n) {
+	margin-right: 0;
+}
+
+.product-photo img {
+	width: 100%;
+	height: 100%;
+}
+
+.features {
+	padding: 25px 20px;
+	margin-bottom: 40px;
+	font-size: 0;
+}
+
+.feature-title {
+	font-size: 24px;
+}
+
+.feature {
+	display: inline-block;
+	width: 400px;
+	vertical-align: top;
+	font-size: 16px;
+}
+
+.feature:nth-child(2n+1) {
+	margin-right: 20px;
+}
+
+.news-list {
+	margin-bottom: 40px;
+}
+
+.news-item {
+	width: 420px;
+	min-height: 220px;
+	padding: 20px;
+}
+
+.news-blog {
+	float: left;
+}
+
+.news-subscribe {
+	float: right;
+}
+
+.map {
+	height: 430px;
+}
+
+.map-contacts {
+	width: 300px;
+	padding: 30px 25px;
+}
+
+.main-footer {
+	padding: 20px 0;
+}
+
+.footer-social {
+	float: left;
+	margin-right: 20px;
+}
+
+.footer-copyright {
+	float: right;
+}
+
+.footer-info {
+	overflow: hidden;
+}
+
+
+/* catalog */
+
+.breadcrumbs {
+	margin-bottom: 10px;
+}
+
+.main-title {
+	margin-bottom: 25px;
+}
+
+.filter {
+	margin-bottom: 40px;
+	font-size: 0;
+}
+
+.filter-item {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 16px;
+}
+
+.paginator {
+	margin-top: 80px;
+	margin-bottom: 30px;
+}
+
+.pages {
+	float: right;
+}
