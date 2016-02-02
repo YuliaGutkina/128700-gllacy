@@ -101,7 +101,7 @@ h1{
 }
 
 .features {
-	padding: 25px 20px;
+	padding: 25px 20px 15px 20px;
 	margin-bottom: 40px;
 	font-size: 0;
 }
@@ -114,6 +114,7 @@ h1{
 	display: inline-block;
 	width: 400px;
 	vertical-align: top;
+	margin-bottom: 10px;
 	font-size: 16px;
 }
 
@@ -181,10 +182,41 @@ h1{
 	font-size: 0;
 }
 
+.filter-row {
+	border: none;
+	margin: 0;
+}
+
+.filter-row:not(:last-child) {
+	margin-bottom: 15px;
+}
+
 .filter-item {
 	display: inline-block;
+	margin-right: 15px;
 	vertical-align: top;
 	font-size: 16px;
+}
+
+.filter-sort {
+	width: 194px;
+}
+
+.filter-price {
+	width: 219px;
+}
+
+.filter-fatness {
+	width: 415px;
+	margin-right: 0;
+}
+
+.filter-topping {
+	width: 700px;
+}
+
+.filter-btn {
+	width: 145px;
 }
 
 .paginator {
