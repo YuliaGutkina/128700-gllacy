@@ -1,6 +1,6 @@
-div, section, article, nav, aside, main, h1, ul, img {
+/* div, section, article, nav, aside, main, h1, ul, img {
 	outline: 1px solid green;
-}
+} */
 
 .clearfix::before,
 .clearfix::after,
@@ -16,11 +16,14 @@ div, section, article, nav, aside, main, h1, ul, img {
 }
 
 body {
+	position: relative;
 	font-family: 'Roboto', Arial, sans-serif;
 	font-size: 16px;
 	line-height: 22px;
-	color: #5a5a5a; /* или так-то белый цвет, да? тогда надо сразу бэкграунд у боди прописывать :) */
+	color: #ffffff;
 	font-weight: normal;
+
+	background: #849d8f;
 }
 
 h1{
@@ -37,26 +40,264 @@ h1{
 	margin: 0 auto;
 }
 
+.btn {
+	display: inline-block;
+	padding: 0 20px;
+	
+	vertical-align: top;
+	line-height: 42px;
+	font-size: 18px;
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+	
+	background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+	border-radius: 21px;
+	border: none;
+	box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+	
+}
+
+.btn:hover {
+	background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+	box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.btn:active {
+	background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+	box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
 .main-header {
-	margin-bottom: 25px; /* пока что, так в каталоге */
+	margin-bottom: 0;
+	min-height: 74px;
 }
 
 .header-logo {
 	float: left;
 	width: 154px;
+	height: 64px;
+	margin-top: 10px;
+	
+	line-height: 0;
 }
 
 .header-right {
+	position: relative;
 	float: right;
-	width: 300px;
+	max-width: 300px;
+	margin-top: 25px;
+}
+
+.header-buttons {
+	font-size: 0;
+}
+
+.header-buttons a{
+	display: inline-block;
+	vertical-align: top;
+	height: 32px;
+	margin-right: 10px;
+	
+	font-size: 14px;
+	line-height: 32px;
+	color: #ffffff;
+	text-decoration: none;
+	
+	background: rgba(255, 255, 255, 0.2);
+	
+	border-radius: 16px;
+}
+
+.header-buttons a:last-child {
+	margin-right: 0;
+}
+
+.header-buttons .search {
+	width: 32px;
+}
+
+.header-buttons .login {
+	width: 90px;
+	padding-left: 45px;
+}
+
+.header-buttons .cart {
+	width: 120px;
+	padding-left: 45px;
+}
+
+.header-contacts {
+	position: absolute;
+	width: 200px;
+	top: 45px;
+	right: 0;
+	
+	font-size: 14px;
+	text-align: right;
+}
+
+.contact-number {
+	display: block;
+
+	font-size: 22px;
+	font-weight: bold;
 }
 
 .main-navigation {
 	overflow: hidden;
+	margin-top: 25px;
+}
+
+.main-navigation ul {
+	margin: 0;
+	padding: 0;
+	
+	list-style: none;
+	font-size: 0;
+}
+
+.main-item{
+	display: inline-block;
+	vertical-align: top;
+	height: 32px;
+	
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.main-item a {
+	display: block;
+	padding: 0 15px;
+	
+	font-size: 16px;
+	font-weight: bold;
+	color: #ffffff;
+	line-height: 32px;
+}
+
+.main-item:hover a {
+	border-radius: 16px;
+	
+	color: #333333;
+	text-decoration: none;
+	
+	background: #e0dfdd;
+}
+
+.slider-radio {
+	display: none;
+}
+
+.slider-bg {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.slider-bg1 {
+	display: none;
+	background: #849d8f url('../img/light1.png') no-repeat center top;
+}
+
+.slider-bg2 {
+	display: none;
+	background: #8996a6 url('../img/light2.png') no-repeat center top;
+}
+
+.slider-bg3 {
+	display: none;
+	background: #9d8b84 url('../img/light3.png') no-repeat center top;
 }
 
 .products-slider {
-	height: 595px; /* это высота самой больщой мороженки, без подсветки*/
+	position: relative;
+	height: 600px; 
+}
+
+.slider-slide {
+	display: none;
+	position: relative;
+	height: 600px;
+	padding-top: 320px;
+	
+	text-align: center;
+}
+
+.slider-slide1 {
+	background: url('../img/slide1.png') no-repeat center 10px;
+}
+
+.slider-slide2 {
+	background: url('../img/slide2.png') no-repeat center 10px;
+}
+
+.slider-slide3 {
+	background: url('../img/slide3.png') no-repeat center 10px;
+}
+
+.slide-title {
+	width: 680px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	padding: 0;
+	
+	font-size: 60px;
+	line-height: 61px;
+	font-weight: bold;
+}
+
+.slide-btn {
+	padding: 0 45px;
+
+	font-size: 32px;
+	line-height: 62px;
+	
+	border-radius: 31px;
+}
+
+.slider-controls {
+	position: absolute;
+	left: 0;
+	bottom: 80px;
+	
+	font-size: 0;
+}
+
+.slider-controls label {
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	margin-right: 8px;
+	
+	vertical-align: top;
+	
+	background-color: transparent;
+	border: 2px solid #ffffff;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+#btn-1:checked ~ .slider-bg1,
+#btn-2:checked ~ .slider-bg2,
+#btn-3:checked ~ .slider-bg3 {
+	display: block;
+}
+
+#btn-1:checked ~ .products-slider .slider-slide1,
+#btn-2:checked ~ .products-slider .slider-slide2,
+#btn-3:checked ~ .products-slider .slider-slide3 {
+	display: block;
+}
+
+#btn-1:checked ~ .products-slider label[for="btn-1"],
+#btn-2:checked ~ .products-slider label[for="btn-2"],
+#btn-3:checked ~ .products-slider label[for="btn-3"] {
+	background: #ffffff;
 }
 
 .promo-list {

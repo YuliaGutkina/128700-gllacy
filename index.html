@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>HTML Academy: Глейси</title>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		<link href="css/normalize.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
@@ -24,35 +26,47 @@
 				</div>
 				<nav class="main-navigation">
 					<ul>
-						<li>
+						<li class="main-item">
 							<a href="#">Каталог</a>
 						</li>
-						<li>
+						<li class="main-item">
 							<a href="#">Доставка и оплата</a>
 						</li>
-						<li>
+						<li class="main-item">
 							<a href="#">О компании</a>
 						</li>
 					</ul>
 				</nav>
 			</div>
 		</header>
+		
 		<div class="container">
+			<input type="radio" class="slider-radio" id="btn-1" value="btn-1" name="toggle" checked>
+			<input type="radio" class="slider-radio" id="btn-2" value="btn-2" name="toggle">
+			<input type="radio" class="slider-radio" id="btn-3" value="btn-3" name="toggle">
+			<div class="slider-bg slider-bg1"></div>
+			<div class="slider-bg slider-bg2"></div>
+			<div class="slider-bg slider-bg3"></div>
 			<section class="products-slider">
-				<input type="radio" id="btn-1" value="btn-1" name="toggle" checked>
-                <input type="radio" id="btn-2" value="btn-2" name="toggle">
-                <input type="radio" id="btn-3" value="btn-3" name="toggle">
-                <div class="slider-controls">
+				<div class="slider-slides">
+					<div class="slider-slide slider-slide1">
+						<p class="slide-title">Крем-брюле и пломбир с малиновым джемом</p>
+						<a href="#" class="btn slide-btn">Давайте оба!</a>
+					</div>
+					<div class="slider-slide slider-slide2">
+						<p class="slide-title">Шоколадный пломбир и лимонный сорбет</p>
+						<a href="#" class="btn slide-btn">Давайте оба!</a>
+					</div>
+					<div class="slider-slide slider-slide3">
+						<p class="slide-title">Пломбир с помадкой и клубничный щербет</p>
+						<a href="#" class="btn slide-btn">Давайте оба!</a>
+					</div>
+				</div>
+				<div class="slider-controls">
                     <label for="btn-1"></label>
                     <label for="btn-2"></label>
                     <label for="btn-3"></label>
                 </div>
-				<div class="slider-slides">
-					<div class="slider-slide">
-						<p class="product-name">Крем-брюле и пломбир с малиновым джемом</p>
-						<a href="#" class="btn slider-btn">Давайте оба!</a>
-					</div>
-				</div>
 			</section>
 		</div>
 		<main class="container">
