@@ -229,19 +229,14 @@ h1{
 	text-align: center;
 }
 
-.slider-slide1 {
-	background: url('../img/slide1.png') no-repeat center 10px;
-}
-
-.slider-slide2 {
-	background: url('../img/slide2.png') no-repeat center 10px;
-}
-
-.slider-slide3 {
-	background: url('../img/slide3.png') no-repeat center 10px;
+.slider-slide img {
+	position: absolute;
+	top: 10px;
+	transform: translate(-50%);
 }
 
 .slide-title {
+	position: relative;
 	width: 680px;
 	margin: 0 auto;
 	margin-bottom: 30px;
@@ -253,6 +248,7 @@ h1{
 }
 
 .slide-btn {
+	position: relative;
 	padding: 0 45px;
 
 	font-size: 32px;
