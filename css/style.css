@@ -217,6 +217,7 @@ h1{
 .products-slider {
 	position: relative;
 	height: 600px; 
+	margin-bottom: -30px;
 }
 
 .slider-slide {
@@ -301,21 +302,31 @@ h1{
 }
 
 .promo-list {
+	position: relative;
 	margin-bottom: 40px;
+	z-index: 10;
+	
+	background: transparent;
 }
 
 .promo {
 	min-height: 210px;
 	width: 420px;
 	padding: 20px;
+	
+	border-radius: 15px;
 }
 
 .promo-rasberry {
 	float: left;
+	
+	background: url('../img/bg-rasberry.jpg') no-repeat 0 0;
 }
 
 .promo-choco {
 	float: right;
+	
+	background: url('../img/bg-choco.jpg') no-repeat 0 0;
 }
 
 .product-list {
