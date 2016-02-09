@@ -86,7 +86,7 @@ h1{
 	position: relative;
 	float: right;
 	max-width: 300px;
-	margin-top: 25px;
+	margin-top: 23px;
 }
 
 .header-buttons {
@@ -146,7 +146,7 @@ h1{
 
 .main-navigation {
 	overflow: hidden;
-	margin-top: 25px;
+	margin-top: 23px;
 }
 
 .main-navigation ul {
