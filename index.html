@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>HTML Academy: Глейси</title>
-		<link href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 		<link href="css/normalize.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 	</head>
@@ -73,12 +73,12 @@
 		</div>
 		<main class="container">
 			<section class="promo-list clearfix">
-				<article class="promo promo-rasberry">
+				<article class="promo promo-rasberry clearfix">
 					<h3 class="promo-title">Малинка даром!</h3>
 					<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
 					<a href="#" class="btn promo-btn">Хочу варенье!</a>
 				</article>
-				<article class="promo promo-choco">
+				<article class="promo promo-choco clearfix">
 					<h3 class="promo-title">Шоколадки даром!</h3>
 					<p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
 					<a href="#" class="btn promo-btn">Хочу шоколадки!</a>
@@ -92,7 +92,9 @@
 					<a class="product-name" href="#">
 						Сливочное с апельсиновым джемом и цитрусовой стружкой
 					</a>
-					<span class="product-price">310 р/кг</span>
+					<span class="product-price">
+						310&#8381;<span class="small">/кг</span>
+					</span>
 				</article>
 				<article class="product hit-product">
 					<a class="product-photo" href="#">
@@ -101,7 +103,9 @@
 					<a class="product-name" href="#">
 						Сливочно-кофейное с кусочками шоколада
 					</a>
-					<span class="product-price">380 р/кг</span>
+					<span class="product-price">
+						380&#8381;<span class="small">/кг</span>
+					</span>
 				</article>
 				<article class="product hit-product">
 					<a class="product-photo" href="#">
@@ -110,7 +114,9 @@
 					<a class="product-name" href="#">
 						Сливочно-клубничное с присыпкой из белого шоколада
 					</a>
-					<span class="product-price">355 р/кг</span>
+					<span class="product-price">
+						355&#8381;<span class="small">/кг</span>
+					</span>
 				</article>
 				<article class="product hit-product">
 					<a class="product-photo" href="#">
@@ -119,7 +125,9 @@
 					<a class="product-name" href="#">
 						Сливочное крем-брюле с карамельной подливкой
 					</a>
-					<span class="product-price">415 р/кг</span>
+					<span class="product-price">
+						415&#8381;<span class="small">/кг</span>
+					</span>
 				</article>
 			</section>
 			<section class="features">
@@ -150,25 +158,30 @@
 					<p>Новое в нашем блоге</p>
 					<a class="post-title" href="#">10  способов сервировки фруктовых щербетов к столу</a>
 				</article>
-				<article class="news-item news-subscribe">
-					<p>
-						Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) 
-					</p>
-					<form action="https://echo.htmlacademy.ru" method="post">
-						<input type="email" placeholder="Электронная почта" name="email" value="">
-						<button type="submit" class="btn news-btn">Отправить</button>
-					</form>
+				<article class="news-item news-subscribe clearfix">
+					<div class="news-subscribe-inner clearfix">
+						<p>
+							Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) 
+						</p>
+						<form action="https://echo.htmlacademy.ru" method="post">
+							<input type="email" placeholder="Электронная почта" name="email" value="" class="text-input">
+							<button type="submit" class="btn news-btn">Отправить</button>
+						</form>
+					</div>
 				</article>
 			</section>
 		</main>
 		<aside class="map">
 			<div class="container">
 				<div class="map-contacts">
-					Адрес главного офиса и офлайн магазина:
-					<span class="contacts-info">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
-					Для заказов по телефону:
-					<span class="contacts-info">8 812 450-25-25</span>
-					(с 10 до 20 ежедневно)
+					<div class="map-contacts-item">
+						Адрес главного офиса и офлайн магазина:
+						<span class="contacts-info">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
+					</div>
+					<div class="map-contacts-item">Для заказов по телефону:
+						<span class="contacts-info">8 812 450-25-25</span>
+						(с 10 до 20 ежедневно)
+					</div>
 					<a href="#" class="btn map-contacts-btn">Форма обратной связи</a>
 				</div>
 			</div>
@@ -182,17 +195,17 @@
 					<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
 				</section>
 				<section class="footer-copyright">
-					<a href="" class="copyright-logo">
+					<a href="" class="footer-copyright-logo">
 						<img src="img/htmlacademy.svg" alt="HTML Academy" width="108" height="37">
 					</a>
-					<span class="footer-title">
+					<span class="footer-copyright-info">
 						Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2016
 					</span>
 				</section>
 				<section class="footer-info">
 						<a href="#">Для поставщиков</a>
-						<a href="#">О производстве</a>
 						<a href="#">Наши документы</a>
+						<a href="#">О производстве</a>
 						<a href="#">Экологические стандарты</a>
 				</section>
 			</div>
