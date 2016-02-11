@@ -1,6 +1,6 @@
 /* div, section, article, nav, aside, main, h1, ul, img {
 	outline: 1px solid green;
-} */
+}  */
 
 .clearfix::before,
 .clearfix::after,
@@ -19,19 +19,10 @@ body {
 	position: relative;
 	font-family: 'Roboto', Arial, sans-serif;
 	font-size: 16px;
-	line-height: 22px;
 	color: #ffffff;
 	font-weight: normal;
 
 	background: #849d8f;
-}
-
-h1{
-	font-family: 'Roboto', Arial, sans-serif;
-	font-size: 35px;
-	line-height: 30px;
-	color: #5a5a5a;
-	font-weight: normal;
 }
 
 .container {
@@ -50,6 +41,7 @@ h1{
 	color: #ffffff;
 	font-weight: bold;
 	text-decoration: none;
+	text-align: center;
 	
 	background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
 	border-radius: 21px;
@@ -149,7 +141,7 @@ h1{
 .header-contacts {
 	position: absolute;
 	width: 200px;
-	top: 45px;
+	top: 50px;
 	right: 0;
 	
 	font-size: 14px;
@@ -367,7 +359,7 @@ h1{
 	position: relative;
 	display: inline-block;
 	width: 200px;
-	min-height: 310px;
+	min-height: 300px;
 	margin-right: 20px;
 	margin-bottom: 40px;
 	padding: 10px 0;
@@ -414,8 +406,9 @@ h1{
 .product-btn-wrapper {
 	display: none;
 	position: absolute;
-	top: 310px;
+	top: 300px;
 	width: 200px;
+	z-index: 10;
 	
 	background: rgba(255, 255, 255, 0.3);
 	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
@@ -666,12 +659,38 @@ h1{
 
 /* catalog */
 
+.inner-page .main-header{
+	margin-bottom: 25px;
+}
+
 .breadcrumbs {
+	margin: 0;
 	margin-bottom: 10px;
+	padding: 0;
+	
+	list-style: none;
+	font-size: 0;
+}
+
+.breadcrumbs li {
+	display: inline-block;
+	margin-right: 10px;
+	
+	font-size: 14px;
+}
+
+.breadcrumbs a {
+	margin-right: 10px;
+	
+	color: #ffffff;
 }
 
 .main-title {
+	margin: 0;
 	margin-bottom: 25px;
+	
+	font-size: 35px;
+	line-height: 35px;
 }
 
 .filter {
@@ -714,7 +733,91 @@ h1{
 
 .filter-btn {
 	width: 145px;
+	height: 32px;
+	vertical-align: bottom;
+	padding: 0;
+	
+	font-size: 16px;
+	line-height: 28px;
+	
+	background: transparent;
+	box-shadow: none;
+	border: 2px solid #fbfcfb;
+	outline: none;
 }
+
+.filter-btn:hover {
+	color: #343434;
+	
+	background: #fafbfb;
+	box-shadow: none;
+	border: none;
+	outline: none;
+}
+
+.filter-btn:active {
+	color: #343434;
+	
+	background: #ededed;
+	border: none;
+	outline: none;
+	box-shadow: inset 0 2px #696969;
+}
+
+.filter-title {
+	display: inline-block;
+	margin-bottom: 5px;
+	padding-left: 15px;
+	
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.price-controls input[type="text"] {
+	width: 30px;
+
+	background: transparent;
+	border: none;
+	outline: none;
+}
+
+.filter-bg {
+	height: 32px;
+	padding: 0 15px;
+	padding-right: 5px;
+	
+	line-height: 32px;
+	
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 16px;
+}
+
+.filter-sort-bg select{
+	width: 100%;
+	background: transparent;
+	border: none;
+	outline: none;
+}
+
+.filter-sort-bg:hover {
+	color: #343434;
+	
+	background: #fbfcfb;
+}
+
+.filter-sort-bg:hover select{
+	border: none;
+}
+
+.filter-sort-bg select:focus{
+	border: none;
+	outline: none;
+}
+
+.filter-sort-bg option {
+	color: #343434;
+}
+
 
 .paginator {
 	margin-top: 80px;
@@ -723,4 +826,66 @@ h1{
 
 .pages {
 	float: right;
+	margin: 0;
+	padding: 0;
+	
+	color: #ffffff;
+	list-style: none;
 }
+
+.page {
+	display: inline-block;
+	width: 26px;
+	height: 26px;	
+	
+	border-radius: 50%;
+}
+
+.page-arrow {
+	display: inline-block;
+	height: 26px;
+	font-size: 22px;
+}
+
+.page-arrow a {
+	color: #ffffff;
+	text-decoration: none;	
+}
+
+.page-left {
+	margin-right: 15px;
+}
+
+.page-right {
+	margin-left: 15px;
+}
+
+.page-left span,
+.page-right span {
+	opacity: 0.2;
+}
+
+.page a, 
+.page span{
+	display: block;
+	width: 26px;
+	height: 26px;
+	
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 16px;
+	text-align: center;
+	line-height: 26px;
+	
+	border-radius: 50%;
+}
+
+.page.active span {
+	background: #ffffff;
+	color: #343434;	
+}
+
+.page a:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+
