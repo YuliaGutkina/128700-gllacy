@@ -31,6 +31,15 @@ body {
 	margin: 0 auto;
 }
 
+a {
+	color: #ffffff;
+}
+
+a:hover,
+a:active {
+	color: #ffbc9e;
+}
+
 .btn {
 	display: inline-block;
 	padding: 0 20px;
@@ -61,6 +70,7 @@ body {
 }
 
 .text-input {
+	position: relative;
 	padding: 10px 15px;
 	
 	font-size: 14px;
@@ -89,6 +99,7 @@ body {
 	width: 154px;
 	height: 64px;
 	margin-top: 10px;
+	margin-right: 15px;
 	
 	line-height: 0;
 }
@@ -122,6 +133,12 @@ body {
 
 .header-buttons a:last-child {
 	margin-right: 0;
+}
+
+.header-buttons a:hover {
+	color: #343434;
+	
+	background: #f8f7f4;
 }
 
 .header-buttons .search {
@@ -175,9 +192,13 @@ body {
 	
 	font-size: 16px;
 	font-weight: bold;
+	line-height: 32px;
+	
+	border-radius: 16px;
 }
 
-.main-item a {
+.main-item a,
+.main-item span {
 	display: block;
 	padding: 0 15px;
 	
@@ -194,6 +215,10 @@ body {
 	text-decoration: none;
 	
 	background: #e0dfdd;
+}
+
+.main-item.active {
+	background: #d07058;
 }
 
 .slider-radio {
@@ -290,6 +315,10 @@ body {
 	cursor: pointer;
 }
 
+.slider-controls label:hover {
+	background: rgba(255, 255, 255, 0.4);
+}
+
 #btn-1:checked ~ .slider-bg1,
 #btn-2:checked ~ .slider-bg2,
 #btn-3:checked ~ .slider-bg3 {
@@ -306,6 +335,7 @@ body {
 #btn-2:checked ~ .products-slider label[for="btn-2"],
 #btn-3:checked ~ .products-slider label[for="btn-3"] {
 	background: #ffffff;
+	cursor: default;
 }
 
 .promo-list {
@@ -434,7 +464,7 @@ body {
 	content: '';
 	
 	position: absolute;
-	top: 0;
+	top: 10px;
 	left: 0;
 	width: 61px;
 	height: 61px;
@@ -635,8 +665,9 @@ body {
 
 .footer-info {
 	width: 360px;
-	font-size: 0;
 	margin: 0 auto;
+	
+	font-size: 0;
 }
 
 .footer-info a {
@@ -646,6 +677,7 @@ body {
 
 	color: #ffffff;
 	font-size: 13px;
+	line-height: 22px;
 }
 
 .footer-info a:nth-child(2n+1) {
@@ -725,20 +757,24 @@ body {
 .filter-fatness {
 	width: 415px;
 	margin-right: 0;
+	
+	font-size: 0;
 }
 
 .filter-topping {
 	width: 700px;
+	
+	font-size: 0;
 }
 
 .filter-btn {
 	width: 145px;
-	height: 32px;
+	height: 35px;
 	vertical-align: bottom;
 	padding: 0;
 	
 	font-size: 16px;
-	line-height: 28px;
+	line-height: 30px;
 	
 	background: transparent;
 	box-shadow: none;
@@ -782,14 +818,17 @@ body {
 }
 
 .filter-bg {
-	height: 32px;
+	height: 35px;
 	padding: 0 15px;
-	padding-right: 5px;
 	
-	line-height: 32px;
+	line-height: 35px;
 	
 	background: rgba(255, 255, 255, 0.2);
 	border-radius: 16px;
+}
+
+.filter-sort-bg {
+	padding-right: 5px;
 }
 
 .filter-sort-bg select{
@@ -818,6 +857,151 @@ body {
 	color: #343434;
 }
 
+.filter-price .filter-bg {
+	padding-top: 15px;
+}
+
+.range-controls  {
+	position: relative;
+}
+
+.range-controls .scale{
+	height: 5px;
+	
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.range-controls .bar {
+	height: 5px;
+	width: 55%;
+	margin-left: 12%;
+	
+	background: #f8f7f4;
+}
+
+.range-controls .toggle {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translate(-50%, -50%);
+	width: 20px;
+	height: 20px;
+	
+	border-radius: 50%;
+	background: #f8f7f4;
+	cursor: pointer;
+}
+
+.range-controls .min-toggle {
+	left: 12%;
+}
+
+.range-controls .max-toggle {
+	left: 68%;
+}
+
+.range-controls .toggle:hover {
+	width: 23px;
+	height: 23px;
+}
+
+.filter-fatness input {
+	display: none;
+}
+
+.filter-fatness label {
+	display: inline-block;
+	position: relative;
+	margin-right: 15px;
+	padding-left: 30px;
+	
+	font-size: 16px;
+}
+
+.filter-fatness label::after {
+	content: '';
+
+	position: absolute;
+	left: 0;
+	top: 50%;
+	
+	width: 20px;
+	height: 20px;
+	
+	transform: translateY(-50%);
+	border: 1px solid #f8f7f4;
+	background: transparent;
+	border-radius: 50%;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+.filter-fatness input[type="radio"]:checked + label::before {
+	content: '';
+
+	position: absolute;
+	left: 5px;
+	top: 50%;
+	
+	width: 10px;
+	height: 10px;
+	
+	transform: translateY(-50%);
+	background: #f8f7f4;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.filter-topping input {
+	display: none;
+}
+
+.filter-topping label {
+	display: inline-block;
+	position: relative;
+	margin-right: 20px;
+	padding-left: 30px;
+	
+	font-size: 16px;
+}
+
+.filter-topping label::after {
+	content: '';
+
+	position: absolute;
+	left: 0;
+	top: 50%;
+	
+	width: 20px;
+	height: 20px;
+	
+	transform: translateY(-50%);
+	border: 1px solid #f8f7f4;
+	background: transparent;
+	border-radius: 5px;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+.filter-topping input[type="checkbox"]:checked + label::before {
+	content: '';
+
+	position: absolute;
+	left: -1px;
+	top: 50%;
+	
+	width: 8px;
+	height: 12px;
+	
+	transform: 
+		rotate(45deg)
+		translateY(-10px);
+	border: 2px solid #f8f7f4;
+	border-top: none;
+	border-left: none;
+	box-sizing: border-box;
+	cursor: pointer;
+}
 
 .paginator {
 	margin-top: 80px;
