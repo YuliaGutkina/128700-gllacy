@@ -25,6 +25,72 @@ body {
 	background: #849d8f;
 }
 
+@font-face {
+    font-family: 'icomoon';
+    src:    url('../fonts/icomoon.eot?dienvp');
+    src:    url('../fonts/icomoon.eot?dienvp#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?dienvp') format('truetype'),
+        url('../fonts/icomoon.woff?dienvp') format('woff'),
+        url('../fonts/icomoon.svg?dienvp#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"]::before, [class*=" icon-"]::before {	/* тут пришлось переделать, иначе со шрифтам беда (в оригинале без before) */
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cow:before {
+    content: "\e909";
+}
+.icon-ice-cream:before {
+    content: "\e90a";
+}
+.icon-leaf:before {
+    content: "\e90b";
+}
+.icon-thermo:before {
+    content: "\e90c";
+}
+.icon-cart:before {
+    content: "\e900";
+}
+.icon-cart-full:before {
+    content: "\e901";
+}
+.icon-fb:before {
+    content: "\e902";
+}
+.icon-heart:before {
+    content: "\e903";
+}
+.icon-insta:before {
+    content: "\e904";
+}
+.icon-login:before {
+    content: "\e905";
+}
+.icon-search:before {
+    content: "\e906";
+}
+.icon-tw:before {
+    content: "\e907";
+}
+.icon-vk:before {
+    content: "\e908";
+}
+
 .container {
 	width: 900px;
 	padding: 0 20px;
@@ -38,6 +104,15 @@ a {
 a:hover,
 a:active {
 	color: #ffbc9e;
+}
+
+.bg-white a {
+	color: #343434;
+}
+
+.bg-white a:hover,
+.bg-white a:active {
+	color: #ec593c;
 }
 
 .btn {
@@ -55,18 +130,27 @@ a:active {
 	background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
 	border-radius: 21px;
 	border: none;
+	outline: none;
 	box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 	
 }
 
 .btn:hover {
+	color: #ffffff;
+	
 	background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
 	box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+	border: none;
+	outline: none;
 }
 
 .btn:active {
+	color: #ffffff;
+	
 	background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
 	box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+	border: none;
+	outline: none;
 }
 
 .text-input {
@@ -143,16 +227,39 @@ a:active {
 
 .header-buttons .search {
 	width: 32px;
+	
+	text-align: center;
+	font-size: 16px;
 }
 
 .header-buttons .login {
+	position: relative; 
 	width: 90px;
-	padding-left: 45px;
+	padding-left: 40px;
+}
+
+.header-buttons .login::before {
+	position: absolute;
+	top: 0;
+	left: 15px;
+	
+	line-height: 35px;
+	font-size: 16px;
 }
 
 .header-buttons .cart {
+	position: relative;
 	width: 120px;
-	padding-left: 45px;
+	padding-left: 40px;
+}
+
+.header-buttons .cart::before {
+	position: absolute;
+	top: 0;
+	left: 15px;
+	
+	line-height: 35px;
+	font-size: 16px;
 }
 
 .header-contacts {
@@ -206,11 +313,10 @@ a:active {
 	font-weight: bold;
 	color: #ffffff;
 	line-height: 32px;
+	border-radius: 16px;
 }
 
 .main-item:hover a {
-	border-radius: 16px;
-	
 	color: #333333;
 	text-decoration: none;
 	
@@ -219,6 +325,14 @@ a:active {
 
 .main-item.active {
 	background: #d07058;
+}
+
+.main-item:active a{
+	color: #333333;
+	text-decoration: none;
+	
+	background: #e0dfdd;
+	box-shadow: inset 0 2px 0 0 #696969;
 }
 
 .slider-radio {
@@ -400,6 +514,7 @@ a:active {
 
 .product:hover {
 	background: rgba(255, 255, 255, 0.3);
+	border-radius: 5px 5px 0 0;
 }
 
 .product:nth-child(4n) {
@@ -430,7 +545,7 @@ a:active {
 	
 	font-weight: bold;
 	font-size: 45px;
-	
+	text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 .product-btn-wrapper {
@@ -446,6 +561,7 @@ a:active {
 
 .product:hover .product-btn-wrapper {
 	display: block;
+	border-radius: 0 0 5px 5px;
 }
 
 .product-btn {
@@ -511,8 +627,10 @@ a:active {
 	width: 48px;
 	margin-right: 10px;
 	
-	border: 2px solid #323232;
-	border-radius: 50%;
+	font-size: 48px;
+	line-height: 48px;
+	
+	border: none;
 }
 
 .feature-text {
@@ -595,6 +713,7 @@ a:active {
 	height: 430px;
 	
 	background: url('../img/map.jpg') no-repeat center 0;
+	background-size: cover;
 }
 
 .map-contacts {
@@ -641,8 +760,32 @@ a:active {
 	height: 38px;
 	margin-right: 10px;
 	
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	color: rgba(255, 255, 255, 0.8);
+	
+	vertical-align: top;
 	border: 3px solid rgba(255, 255, 255, 0.5);
 	border-radius: 50%;
+}
+
+.social-btn::before {
+	font-size: 32px;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+}
+
+
+.social-btn:hover {
+	color: rgba(255, 255, 255, 1);
+}
+
+.social-btn:active {
+	color: rgba(255, 255, 255, 0.8);
+	
+	box-shadow: inset 0 2px 0 0 #888888;
 }
 
 .footer-copyright {
@@ -659,10 +802,6 @@ a:active {
 	font-size: 12px;
 }
 
-.footer-copyright-info a {
-	color: #ffffff;
-}
-
 .footer-info {
 	width: 360px;
 	margin: 0 auto;
@@ -675,17 +814,32 @@ a:active {
 	vertical-align: top;
 	width: 180px;
 
-	color: #ffffff;
 	font-size: 13px;
 	line-height: 22px;
 }
 
 .footer-info a:nth-child(2n+1) {
-	padding-left: 40px;
+	padding-left: 25px;
 }
 
 .footer-info a:first-child {
 	font-weight: bold;
+}
+
+.footer-heart {
+	position: relative;
+}
+
+.footer-heart::before {
+	position: absolute;
+	top: 5px;
+	left: 0;
+	
+	width: 20px;
+	height: 14px;
+	
+	line-height: 14px;
+	font-size: 14px;
 }
 
 
@@ -713,8 +867,6 @@ a:active {
 
 .breadcrumbs a {
 	margin-right: 10px;
-	
-	color: #ffffff;
 }
 
 .main-title {
@@ -936,6 +1088,10 @@ a:active {
 	box-sizing: border-box;
 }
 
+.filter-fatness label:hover::after {
+	border-width: 2px;
+}
+
 .filter-fatness input[type="radio"]:checked + label::before {
 	content: '';
 
@@ -950,6 +1106,15 @@ a:active {
 	background: #f8f7f4;
 	border-radius: 50%;
 	cursor: pointer;
+}
+
+.filter-fatness input[type="radio"]:disabled + label{
+	opacity: 0.4;
+}
+
+.filter-fatness input[type="radio"]:disabled + label::after {
+	cursor: default;
+	border-width: 1px;
 }
 
 .filter-topping input {
@@ -983,6 +1148,10 @@ a:active {
 	box-sizing: border-box;
 }
 
+.filter-topping label:hover::after {
+	border-width: 2px;
+}
+
 .filter-topping input[type="checkbox"]:checked + label::before {
 	content: '';
 
@@ -1003,8 +1172,20 @@ a:active {
 	cursor: pointer;
 }
 
+.filter-topping input[type="checkbox"]:disabled + label{
+	opacity: 0.4;
+}
+
+.filter-topping input[type="checkbox"]:disabled + label::after {
+	cursor: default;
+	border-width: 1px;
+}
+
+.inner-page .product-list {
+	margin-bottom: 30px;
+}
+
 .paginator {
-	margin-top: 80px;
 	margin-bottom: 30px;
 }
 
