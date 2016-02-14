@@ -66,7 +66,7 @@ body {
 .icon-cart:before {
     content: "\e900";
 }
-.icon-cart-full:before {
+.icon-cart-full:after {
     content: "\e901";
 }
 .icon-fb:before {
@@ -154,9 +154,11 @@ a:active {
 }
 
 .text-input {
-	padding: 10px 15px;
+	height: 38px;
+	padding: 0 15px;
 	
 	font-size: 14px;
+	line-height: 38px;
 	
 	border: 1px solid #d3d3d2;
 	border-radius: 5px;
@@ -182,7 +184,7 @@ a:active {
 
 .for-text-input {
 	position: absolute;
-	top: 10px;
+	top: 8px;
 	left: 15px;
 	
 	font-size: 16px;
@@ -195,7 +197,7 @@ a:active {
 .text-input:focus + .for-text-input,
 .text-input:invalid + .for-text-input  {
 	font-size: 11px;
-	transform: translateY(-30px);
+	transform: translateY(-27px);
 }
 
 .text-input:invalid + .for-text-input {
@@ -229,15 +231,27 @@ a:active {
 }
 
 .header-buttons {
+	margin: 0;
+	padding: 0;
 	max-width: 300px;
+	
 	font-size: 0;
 }
 
-.header-buttons a{
+.header-buttons li {
+	position: relative;
 	display: inline-block;
 	vertical-align: top;
-	height: 32px;
 	margin-right: 10px;
+	padding-bottom: 5px;
+}
+
+.header-buttons .header-button{
+	position: relative;
+	display: block;
+	
+	height: 32px;
+	
 	
 	font-size: 14px;
 	line-height: 32px;
@@ -249,51 +263,212 @@ a:active {
 	border-radius: 16px;
 }
 
-.header-buttons a:last-child {
+.header-buttons li:last-child {
 	margin-right: 0;
 }
 
-.header-buttons a:hover {
+.header-buttons li:hover .header-button{
 	color: #343434;
 	
 	background: #f8f7f4;
 }
 
-.header-buttons .search {
+.header-button-drop-down {
+	display: none;
+	position: absolute;
+	top: 37px;
+	right: 0;
+	padding: 15px;
+	
+	color: #343434;
+	
+	background: #f8f7f4;
+	border-radius: 5px;
+	
+	z-index: 30;
+}
+
+
+.header-search .header-button{
 	width: 32px;
 	
 	text-align: center;
 	font-size: 16px;
 }
 
-.header-buttons .login {
+.header-search:hover .search-drop-down {
+	display: block;
+}
+
+.search-drop-down .text-input {
+	width: 310px;
+	
+	box-sizing: border-box;
+}
+
+.header-login .header-button{
 	position: relative; 
 	width: 90px;
 	padding-left: 40px;
 }
 
-.header-buttons .login::before {
+.header-login .header-button::before {
 	position: absolute;
 	top: 0;
 	left: 15px;
 	
-	line-height: 35px;
-	font-size: 16px;
+	line-height: 32px;
+	font-size: 18px;
 }
 
-.header-buttons .cart {
+.login-drop-down {
+	padding-top: 20px;
+}
+
+.login-drop-down .text-input{
+	margin-bottom: 15px;
+	width: 240px;
+}
+
+.header-drop-down-btn {
+	padding: 0 30px;
+	height: 36px;
+	
+	font-size: 15px;
+	line-height: 36px;
+	white-space: nowrap;
+	
+	cursor: pointer;
+}
+
+.header-login-links{
+	float: right;
+}
+
+.header-login-links a {
+	font-size: 13px;
+	line-height: 20px;
+}
+
+.header-login:hover .login-drop-down {
+	display: block;
+}
+
+.header-cart .header-button {
 	position: relative;
 	width: 120px;
 	padding-left: 40px;
 }
 
-.header-buttons .cart::before {
+.header-cart .header-button::before {
 	position: absolute;
 	top: 0;
 	left: 15px;
 	
-	line-height: 35px;
-	font-size: 16px;
+	line-height: 32px;
+	font-size: 18px;
+}
+
+.header-cart-full:hover  .header-button::before {
+	content: '';
+	
+	height: 32px;
+	width: 21px;
+	
+	background: url('../img/cart-full.png') no-repeat 0 50%;
+}
+
+.header-cart-full:hover .header-button-drop-down {
+	display: block;
+	
+	font-size: 13px;
+}
+
+.cart-drop-down-content {
+	width: 510px;
+	
+	border-collapse: collapse;
+	border-bottom: 1px solid #cacac7;
+}
+
+.cart-drop-down-content td {
+	padding-top: 20px;
+	padding-bottom: 15px;
+	
+	text-align: center;
+	vertical-align: top;
+}
+
+.cart-drop-down-content td:nth-child(1) {
+	width: 25px;
+}
+
+.cart-drop-down-content td:nth-child(2) {
+	width: 35px;
+	padding-top: 10px;
+}
+
+.cart-drop-down-content td:nth-child(3) {
+	padding-left: 10px;
+	
+	text-align: left;
+}
+
+.cart-drop-down-content td:nth-child(4) {
+	width: 125px;
+}
+
+.cart-drop-down-content td:nth-child(5) {
+	width: 85px;
+}
+
+.cart-drop-down-content a {
+	text-decoration: none;
+}
+
+.close-btn {
+	position: relative;
+	display: block;
+	width: 12px;
+	height: 12px;
+}
+
+.close-btn::before,
+.close-btn::after {
+	content: '';
+	
+	position: absolute;
+	top: 0;
+	left: 6px;
+	
+	width: 1px;
+	height: 12px;
+	background: #343434;
+}
+
+.close-btn::before {
+	transform: rotate(45deg);
+}
+
+.close-btn:after{
+	transform: rotate(-45deg);
+}
+
+.price-kilo {
+	color: #7f7f7f;
+}
+
+.cart-drop-down .total-price {
+	display: block;
+	text-align: right;
+	
+	font-size: 15px;
+	line-height: 45px;
+	font-weight: bold;
+}
+
+.cart-drop-down .header-drop-down-btn {
+	float: right;
 }
 
 .header-contacts {
@@ -304,6 +479,8 @@ a:active {
 	
 	font-size: 14px;
 	text-align: right;
+	
+	z-index: 20;
 }
 
 .contact-number {
@@ -600,11 +777,10 @@ a:active {
 .product {
 	position: relative;
 	display: inline-block;
-	width: 200px;
+	width: 25%;
 	min-height: 300px;
-	margin-right: 20px;
 	margin-bottom: 40px;
-	padding: 10px 0;
+	padding: 10px;
 	
 	vertical-align: top;
 	font-size: 16px;
@@ -613,10 +789,6 @@ a:active {
 .product:hover {
 	background: rgba(255, 255, 255, 0.3);
 	border-radius: 5px 5px 0 0;
-}
-
-.product:nth-child(4n) {
-	margin-right: 0;
 }
 
 .product-photo img {
@@ -639,7 +811,7 @@ a:active {
 .product-price {
 	position: absolute;
 	top: 145px;
-	left: 0;
+	left: 10px;
 	
 	font-weight: bold;
 	font-size: 45px;
@@ -650,7 +822,9 @@ a:active {
 	display: none;
 	position: absolute;
 	top: 300px;
-	width: 200px;
+	left: 0;
+	width: 100%;
+	padding: 0 10px;
 	z-index: 10;
 	
 	background: rgba(255, 255, 255, 0.3);
@@ -799,8 +973,19 @@ a:active {
 .news-subscribe .text-input {
 	float: left;
 	width: 225px;
+	height: 42px;
 
 	font-size: 16px;
+}
+
+.news-subscribe .for-text-input {
+	top: 10px;
+}
+
+.news-subscribe .text-input:focus + .for-text-input,
+.news-subscribe .text-input:invalid + .for-text-input {
+	font-size: 11px;
+	transform: translateY(-29px);
 }
 
 .news-subscribe .news-btn {

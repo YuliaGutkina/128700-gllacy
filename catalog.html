@@ -10,15 +10,44 @@
 	<body class="inner-page">
 		<header class="main-header">
 			<div class="container">
-				<a href="#" class="header-logo">
+				<a href="index.html" class="header-logo">
 					<img src="img/logo.svg" alt="Gllacy Shop" width="154" height="64">
 				</a>
 				<div class="header-right">
-					<div class="header-buttons">
-						<a href="#" class="search icon-search"></a>
-						<a href="#" class="login icon-login">Вход</a>
-						<a href="#" class="cart icon-cart">Пусто</a>
-					</div>
+					<ul class="header-buttons">
+						<li class="header-search">
+							<a href="#" class="header-button icon-search"></a>
+							<div class="header-button-drop-down search-drop-down">
+								<label class="text-input-label">
+									<input type="search" name="search" value="" class="text-input">
+									<span class="for-text-input">Что ищем?</span>
+								</label>
+							</div>
+						</li>
+						<li class="header-login">
+							<a href="#" class="header-button icon-login">Вход</a>
+							<div class="header-button-drop-down login-drop-down clearfix bg-white">
+								<form action="https://echo.htmlacademy.ru" method="post">
+									<label class="text-input-label">
+										<input type="email" name="login-email" value="" class="text-input">
+										<span class="for-text-input">Электронная почта</span>
+									</label>
+									<label class="text-input-label">
+										<input type="password" name="login-password" value="" class="text-input">
+										<span class="for-text-input">Пароль</span>
+									</label>
+									<div class="header-login-links">
+										<a href="#">Забыли пароль?</a><br>
+										<a href="#">Новая регистрация</a>
+									</div>
+									<button type="submit" class="btn header-drop-down-btn">Войти</button>
+								</form>
+							</div>
+						</li>
+						<li class="header-cart">
+							<span class="header-button icon-cart">Пусто</span>
+						</li>				
+					</ul>
 					<div class="header-contacts">
 						<span>С 10 до 20, ежедневно</span>
 						<span class="contact-number">8 812 450-25-25</span>
@@ -32,11 +61,11 @@
 								<li class="main-catalog-item">
 									<a href="#">Новинки</a>
 								</li>
-								<li class="main-catalog-item">
-									<a href="#">Сливочное</a>
-								</li>
 								<li class="main-catalog-item active">
-									<span>Щербеты</span>
+									<span>Сливочное</span>
+								</li>
+								<li class="main-catalog-item">
+									<a href="#">Щербеты</a>
 								</li>
 								<li class="main-catalog-item">
 									<a href="#">Фруктовый лёд</a>
@@ -99,11 +128,11 @@
 						<div class="filter-bg">
 							<input type="radio" name="fatness" value="zero" id="zero">
 							<label for="zero">0%</label>
-							<input type="radio" name="fatness" value="less-ten" id="less-ten" checked disabled>
+							<input type="radio" name="fatness" value="less-ten" id="less-ten" checked>
 							<label for="less-ten">до 10%</label>
 							<input type="radio" name="fatness" value="less-thirty" id="less-thirty">
 							<label for="less-thirty">до 30%</label>
-							<input type="radio" name="fatness" value="more-thirty" id="more-thirty" disabled>
+							<input type="radio" name="fatness" value="more-thirty" id="more-thirty">
 							<label for="more-thirty">выше 30%</label>
 						</div>
 					</div>
@@ -112,13 +141,13 @@
 					<div class="filter-item filter-topping">
 						<span class="filter-title">Наполнители:</span>
 						<div class="filter-bg">
-							<input type="checkbox" name="topping" value="choco" id="choco" checked disabled>
+							<input type="checkbox" name="topping" value="choco" id="choco" checked>
 							<label for="choco">шоколадные</label>
 							<input type="checkbox" name="topping" value="sugar" id="sugar" checked>
 							<label for="sugar">сахарные присыпки</label>
 							<input type="checkbox" name="topping" value="fruits" id="fruits">
 							<label for="fruits">фрукты</label>
-							<input type="checkbox" name="topping" value="syrop" id="syrop" disabled>
+							<input type="checkbox" name="topping" value="syrop" id="syrop">
 							<label for="syrop">сиропы</label>
 							<input type="checkbox" name="topping" value="jam" id="jam">
 							<label for="jam">джемы</label>
