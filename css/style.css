@@ -154,11 +154,9 @@ a:active {
 }
 
 .text-input {
-	position: relative;
 	padding: 10px 15px;
 	
 	font-size: 14px;
-	
 	
 	border: 1px solid #d3d3d2;
 	border-radius: 5px;
@@ -171,6 +169,35 @@ a:active {
 .text-input:focus{
 	border: 2px solid #8fbdec;
 	outline: none;
+}
+
+.text-input-label {
+	display: block;
+	position: relative;
+}
+
+.for-text-input {
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	
+	font-size: 16px;
+	line-height: 24px;
+	color: #9b9b9b;
+}
+
+.text-input:focus + .for-text-input,
+.text-input:valid + .for-text-input {
+	font-size: 11px;
+	transform: translateY(-30px);
+}
+
+.text-input:valid + .for-text-input {
+	color: #d3d3d2;
+}
+
+.text-input:focus + .for-text-input {
+	color: #8fbdec;
 }
 
 .main-header {
