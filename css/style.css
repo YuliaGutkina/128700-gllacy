@@ -162,6 +162,10 @@ a:active {
 	border-radius: 5px;
 }
 
+.text-input:invalid {
+	box-shadow: none;
+}
+
 .text-input:hover {
 	border: 2px solid #d3d3d2;
 }
@@ -184,6 +188,8 @@ a:active {
 	font-size: 16px;
 	line-height: 24px;
 	color: #9b9b9b;
+	
+	pointer-events: none;
 }
 
 .text-input:focus + .for-text-input,
@@ -223,6 +229,7 @@ a:active {
 }
 
 .header-buttons {
+	max-width: 300px;
 	font-size: 0;
 }
 
@@ -307,11 +314,12 @@ a:active {
 }
 
 .main-navigation {
-	overflow: hidden;
+	margin-left: 168px;
+	margin-right: 300px;
 	margin-top: 23px;
 }
 
-.main-navigation ul {
+.main-navigation > ul {
 	margin: 0;
 	padding: 0;
 	
@@ -320,21 +328,20 @@ a:active {
 }
 
 .main-item{
+	position: relative;
 	display: inline-block;
 	vertical-align: top;
-	height: 32px;
-	
+	padding-bottom: 5px;
+		
 	font-size: 16px;
 	font-weight: bold;
-	line-height: 32px;
-	
-	border-radius: 16px;
 }
 
-.main-item a,
-.main-item span {
+.main-item > a,
+.main-item > span {
 	display: block;
 	padding: 0 15px;
+	height: 32px;
 	
 	font-size: 16px;
 	font-weight: bold;
@@ -343,23 +350,87 @@ a:active {
 	border-radius: 16px;
 }
 
-.main-item:hover a {
+.main-item:hover > a {
 	color: #333333;
 	text-decoration: none;
 	
-	background: #e0dfdd;
+	background: #f8f7f4;
 }
 
-.main-item.active {
+.main-item.active span{
 	background: #d07058;
 }
 
-.main-item:active a{
+.main-item:active > a{
 	color: #333333;
 	text-decoration: none;
 	
 	background: #e0dfdd;
 	box-shadow: inset 0 2px 0 0 #696969;
+}
+
+.main-catalog-menu {
+	display: none;
+	position: absolute;
+	top: 37px;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	z-index: 30;
+	
+	font-size: 14px;
+	line-height: 28px;
+	color: #343434;
+	font-weight: normal;
+	white-space: nowrap;
+	
+	list-style: none;
+	background: #f8f7f4;
+	border-radius: 5px;
+}
+
+.main-item:hover .main-catalog-menu {
+	display: block;
+}
+
+.main-catalog-menu li {
+	margin: 5px 0;
+	padding: 0 5px;
+}
+
+.main-catalog-menu li:hover {
+	background: #fbded7;
+}
+
+.main-catalog-menu li:active {
+	background: #f6b5a5;
+}
+
+.main-catalog-menu li.active{
+	background: #d07058;
+}
+
+.main-catalog-menu li.active a,
+.main-catalog-menu li.active span {
+	color: #ffffff;
+}
+
+.main-catalog-menu a,
+.main-catalog-menu span {
+	display: block;
+	padding: 0 15px;
+	
+	
+	font-size: 14px;
+	color: #343434;
+	text-decoration: none;
+}
+
+.main-catalog-menu li:first-child a,
+.main-catalog-menu li:first-child span{
+	font-weight: bold;
+	
+	border-bottom: 1px solid #d1d0ce;
 }
 
 .slider-radio {
