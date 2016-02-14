@@ -187,12 +187,12 @@ a:active {
 }
 
 .text-input:focus + .for-text-input,
-.text-input:valid + .for-text-input {
+.text-input:invalid + .for-text-input  {
 	font-size: 11px;
 	transform: translateY(-30px);
 }
 
-.text-input:valid + .for-text-input {
+.text-input:invalid + .for-text-input {
 	color: #d3d3d2;
 }
 
