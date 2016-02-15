@@ -309,14 +309,14 @@
 				</section>
 			</div>
 		</footer>
-		<div class="popup-wrap">
+		<div class="popup-wrap popup-callorder-wrap">
 			<div class="popup-overlay"></div>
 			<div class="popup-content popup-callorder-content">
 				<button class="popup-closer close-btn" type="button"></button>
 				<h3 class="popup-title">Мы обязательно вам ответим!</h3>
 				<form action="https://echo.htmlacademy.ru" method="post" class="callorder-form clearfix">
 					<label class="text-input-label">
-						<input type="text" name="name" value="" class="text-input big-text-input">
+						<input type="text" name="user-name" value="" class="text-input big-text-input">
 						<span class="for-text-input">Как вас зовут?</span>
 					</label>
 					<label class="text-input-label">
@@ -324,12 +324,67 @@
 						<span class="for-text-input">Ваша почта для ответа?</span>
 					</label>
 					<label class="text-input-label textarea-label">
-						<textarea name="info" cols="30" rows="10" class="text-input big-text-input"></textarea>
+						<textarea name="info" cols="30" rows="10" class="text-input big-text-input" value=""></textarea>
 						<span class="for-text-input">Напишите что-нибудь...</span>
 					</label>
 					<button class="btn" type="submit">Отправить</button>
 				</form>
 			</div>
 		</div>
+		<script>
+			var callOrderLink = document.querySelector(".map-contacts-btn");
+			var callOrderPopup = document.querySelector(".popup-callorder-wrap");
+			var callOrderClose = callOrderPopup.querySelector(".popup-closer");
+			var callOrderOverlay = callOrderPopup.querySelector(".popup-overlay");
+			var form = callOrderPopup.querySelector("form");
+			var userName = callOrderPopup.querySelector("[name=user-name]");
+			var email = callOrderPopup.querySelector("[name=email]");
+			var info = callOrderPopup.querySelector("[name=info]");
+			var userNameStorage = localStorage.getItem("userName");
+			var emailStorage = localStorage.getItem("email");
+			
+			callOrderLink.addEventListener("click", function(event) {
+				event.preventDefault();
+				callOrderPopup.classList.add("popup-wrap-show");
+				
+				if (userNameStorage && emailStorage) {
+					userName.value = userNameStorage;
+					email.value = emailStorage;
+					info.focus();
+				} else {
+					userName.focus();
+				}
+				
+			});
+			
+			callOrderClose.addEventListener("click", function(event) {
+				event.preventDefault();
+				callOrderPopup.classList.remove("popup-wrap-show");
+			});
+			
+			callOrderOverlay.addEventListener("click", function(event) {
+				event.preventDefault();
+				callOrderPopup.classList.remove("popup-wrap-show");
+			});
+			  
+			form.addEventListener("submit", function(event) {
+				if (!userName.value || !email.value || !info.value) {
+					event.preventDefault();
+					console.log("Нужно ввести данные"); 
+				} else {
+					localStorage.setItem("userName", userName.value);
+					localStorage.setItem("email", email.value);
+				}
+			});
+			
+			window.addEventListener("keydown", function(event) {
+				if (event.keyCode === 27) {
+					if (callOrderPopup.classList.contains("popup-wrap-show")) {
+						callOrderPopup.classList.remove("popup-wrap-show");
+					}
+				}
+			});
+			
+		</script>
 	</body>
 </html>

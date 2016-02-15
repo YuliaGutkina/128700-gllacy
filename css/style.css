@@ -1567,6 +1567,10 @@ a:active {
     z-index: 100;
 }
 
+.popup-wrap-show {
+	display: block;
+}
+
 .popup-overlay {
     width: 100%;
     height: 100%;
