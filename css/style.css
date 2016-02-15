@@ -980,9 +980,12 @@ a:active {
 	padding-right: 12px;
 }
 
-.news-subscribe .big-text-input {
-	margin-top: 15px;
+.news-subscribe .big-text-input{
 	width: 100%;
+}
+
+.big-text-input {
+	margin-top: 15px;
 }
 
 .big-text-input {
@@ -1550,5 +1553,101 @@ a:active {
 
 .page a:hover {
 	background: rgba(255, 255, 255, 0.2);
+}
+
+/* popups */
+
+.popup-wrap {
+	display: none;
+	width: 100%;
+    height: 100%;
+    position: fixed;
+	top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.popup-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.popup-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 480px;
+	padding: 25px;
+	padding-top: 15px;
+	
+	color: #343434;
+	font-size: 16px;
+	
+	background: #f8f7f4;
+	z-index: 100;
+	transform: translate(-50%, -50%);
+	border-radius: 10px;
+}
+
+.popup-closer {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 16px;
+	height: 16px;
+	
+	background: none;
+	border: none;
+	outline: none;
+}
+
+.popup-closer::before,
+.popup-closer::after {
+	height: 16px;
+	width: 2px;
+	left: 6px;
+	top: 0;
+	
+	background: #343434;
+}
+
+.popup-title {
+	margin: 0;
+	margin-bottom: 5px;
+	padding: 0;
+	
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 500;
+}
+
+.callorder-form .text-input-label {
+	margin-bottom: 5px;
+	width: 265px;
+}
+
+.callorder-form  .text-input-label:last-of-type {
+	margin-bottom: 25px;
+}
+
+.callorder-form .textarea-label {
+	width: 100%;
+}
+
+.callorder-form .big-text-input {
+	width: 100%;
+}
+
+.callorder-form  textarea {
+	height: 150px;
+	resize: none;
+}
+
+.callorder-form .btn {
+	float: right;
 }
 
