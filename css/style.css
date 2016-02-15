@@ -196,12 +196,17 @@ a:active {
 }
 
 .text-input:focus + .for-text-input,
-.text-input:invalid + .for-text-input  {
+.text-input:invalid + .for-text-input,
+.text-input:valid + .for-text-input   {
 	font-size: 11px;
 	transform: translateY(-27px);
 }
 
 .text-input:invalid + .for-text-input {
+	color: #d3d3d2;
+}
+
+.text-input:valid + .for-text-input {
 	color: #d3d3d2;
 }
 
@@ -999,7 +1004,8 @@ a:active {
 }
 
 .big-text-input:focus + .for-text-input,
-.big-text-input:invalid + .for-text-input {
+.big-text-input:invalid + .for-text-input,
+.big-text-input:valid + .for-text-input {
 	font-size: 11px;
 	transform: translateY(-29px);
 }
