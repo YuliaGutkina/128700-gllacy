@@ -196,14 +196,9 @@ a:active {
 }
 
 .text-input:focus + .for-text-input,
-.text-input:invalid + .for-text-input,
 .text-input:valid + .for-text-input   {
 	font-size: 11px;
 	transform: translateY(-27px);
-}
-
-.text-input:invalid + .for-text-input {
-	color: #d3d3d2;
 }
 
 .text-input:valid + .for-text-input {
@@ -1203,7 +1198,7 @@ a:active {
 .filter-item {
 	display: inline-block;
 	margin-right: 15px;
-	vertical-align: top;
+	vertical-align: bottom;
 	font-size: 16px;
 }
 
@@ -1263,6 +1258,7 @@ a:active {
 
 .filter-title {
 	display: inline-block;
+	vertical-align: top;
 	margin-bottom: 5px;
 	padding-left: 15px;
 	
@@ -1279,17 +1275,19 @@ a:active {
 }
 
 .filter-bg {
-	height: 35px;
-	padding: 0 15px;
-	
-	line-height: 35px;
+	padding: 5px 15px;
 	
 	background: rgba(255, 255, 255, 0.2);
 	border-radius: 16px;
 }
 
+.filter-bg label {
+	line-height: 25px;
+}
+
 .filter-sort-bg {
 	padding-right: 5px;
+	height: 35px;
 }
 
 .filter-sort-bg select{
@@ -1297,6 +1295,9 @@ a:active {
 	background: none;
 	border: none;
 	outline: none;
+	
+	-moz-appearance: none;
+	-webkit-appearance: none;
 }
 
 .filter-sort-bg:hover {
@@ -1320,6 +1321,7 @@ a:active {
 
 .filter-price .filter-bg {
 	padding-top: 15px;
+	height: 35px;
 }
 
 .range-controls  {
@@ -1433,7 +1435,7 @@ a:active {
 .filter-topping label {
 	display: inline-block;
 	position: relative;
-	margin-right: 20px;
+	margin-right: 19px;
 	padding-left: 30px;
 	
 	font-size: 16px;
