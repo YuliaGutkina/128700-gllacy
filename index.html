@@ -19,7 +19,7 @@
 							<a href="#" class="header-button icon-search"></a>
 							<div class="header-button-drop-down search-drop-down">
 								<label class="text-input-label">
-									<input type="search" name="search" value="" class="text-input">
+									<input type="search" name="search" value="" class="text-input" required>
 									<span class="for-text-input">Что ищем?</span>
 								</label>
 							</div>
@@ -29,11 +29,11 @@
 							<div class="header-button-drop-down login-drop-down clearfix bg-white">
 								<form action="https://echo.htmlacademy.ru" method="post">
 									<label class="text-input-label">
-										<input type="email" name="login-email" value="" class="text-input">
+										<input type="email" name="login-email" value="" class="text-input" required>
 										<span class="for-text-input">Электронная почта</span>
 									</label>
 									<label class="text-input-label">
-										<input type="password" name="login-password" value="" class="text-input">
+										<input type="password" name="login-password" value="" class="text-input" required>
 										<span class="for-text-input">Пароль</span>
 									</label>
 									<div class="header-login-links">
@@ -50,28 +50,28 @@
 								<table class="cart-drop-down-content bg-white">
 									<tbody>
 										<tr>
-											<td>
+											<td width="12">
 												<a href="" class="close-btn"></a>
 											</td>
-											<td>
+											<td width="60" class="cart-product-photo">
 												<img src="img/product1.png" alt="" width="35" height="35">
 											</td>
-											<td>
+											<td class="cart-product-name">
 												<a href="#">Пломбир с апельсиновым джемом</a>
-											</td>
+											</td width="125">
 											<td>
 												1,5 кг <span class="price-kilo">х 200 руб.</span>
 											</td>
-											<td>300 руб.</td>
+											<td width="85">300 руб.</td>
 										</tr>
 										<tr>
 											<td>
 												<a href="" class="close-btn"></a>
 											</td>
-											<td>
+											<td class="cart-product-photo">
 												<img src="img/product3.png" alt="" width="35" height="35">
 											</td>
-											<td>
+											<td class="cart-product-name">
 												<a href="#">Клубничный пломбир с присыпкой из белого шоколада</a>
 											</td>
 											<td>
@@ -262,7 +262,7 @@
 						<form action="https://echo.htmlacademy.ru" method="post">
 							<button type="submit" class="btn news-btn">Отправить</button>
 							<label class="text-input-label">
-								<input type="email" name="email" value="" class="text-input big-text-input">
+								<input type="email" name="email" value="" class="text-input big-text-input" required>
 								<span class="for-text-input">Электронная почта</span>
 							</label>
 						</form>
