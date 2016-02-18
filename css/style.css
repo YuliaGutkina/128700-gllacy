@@ -1283,7 +1283,7 @@ a:active {
 }
 
 .filter-sort-bg {
-	padding-right: 5px;
+	position: relative;
 	height: 35px;
 }
 
@@ -1298,10 +1298,28 @@ a:active {
 	-moz-appearance: none;
 }
 
+.filter-sort-bg::after {
+	content: '';
+	
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 0;
+	height: 0;
+	border: 5px solid #ffffff;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+}
+
 .filter-sort-bg:hover {
 	color: #343434;
 	
 	background: #fbfcfb;
+}
+
+.filter-sort-bg:hover::after {
+	border-top-color: #343434;
 }
 
 .filter-sort-bg:hover select,
