@@ -1043,11 +1043,21 @@ a:active {
 	background-size: cover;
 }
 
+.map-container {
+	min-width: 900px;
+	max-width: 1200px;
+	position: relative;
+	margin: 0 auto;
+	z-index: 50;
+}
+
 .map-contacts {
-	float: right;
+	position: absolute;
+	top: 65px;
+	right: 2.3%;
 	width: 300px;
-	margin-top: 65px;
 	padding: 30px 25px;
+	z-index: 100;
 	
 	color: #343434;
 	font-size: 14px;

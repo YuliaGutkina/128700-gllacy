@@ -100,7 +100,7 @@
 									<a href="#">Новинки</a>
 								</li>
 								<li class="main-catalog-item">
-									<a href="#">Сливочное</a>
+									<a href="catalog.html">Сливочное</a>
 								</li>
 								<li class="main-catalog-item">
 									<a href="#">Щербеты</a>
@@ -279,7 +279,7 @@
 			</section>
 		</main>
 		<aside class="map" id="yandex_map">
-			<div class="container">
+			<div class="map-container">
 				<div class="map-contacts">
 					<div class="map-contacts-item">
 						Адрес главного офиса и офлайн магазина:
@@ -401,7 +401,7 @@
 
 			function init () {
 				myMap = new ymaps.Map('yandex_map', {
-				center: [59.94025164, 30.31262114],
+				center: [59.939466, 30.327657],
 				controls: ['zoomControl'],
 				zoom: 16
 				});
@@ -411,9 +411,9 @@
 					, balloonContentFooter: 'тел. +7 (812) 275-75-75'
 					}, {
 						iconLayout: 'default#image',
-						iconImageSize: [231, 190],
+						iconImageSize: [218, 142],
 						iconImageHref: 'img/pin.png',
-						iconImageOffset: [-10,-240]
+						iconImageOffset: [-15, -155]
 					}));
 				myMap.behaviors.disable('scrollZoom');
 			}
