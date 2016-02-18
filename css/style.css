@@ -1541,18 +1541,18 @@ a:active {
 	background: rgba(255, 255, 255, 0.2);
 }
 
-.main-footer .container {
+.main-footer-container {
 	position: relative;
 }
 
-.inner-page .main-footer .container::before{
+.inner-page .main-footer-container::before{
 	content: '';
 	position: absolute;
 	top: 0;
 	left: 0;
 	height: 1px;
-	width: 100%;
 	margin: 0 2.1%;
+	width: 95.8%;
 	
 	background: rgba(255, 255, 255, 0.3);
 }
