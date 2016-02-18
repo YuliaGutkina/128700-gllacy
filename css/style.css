@@ -787,11 +787,10 @@ a:active {
 	display: inline-block;
 	width: 25%;
 	min-height: 300px;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 	padding: 10px;
 	
 	vertical-align: top;
-	font-size: 16px;
 }
 
 .product:hover {
@@ -815,6 +814,8 @@ a:active {
 	color: #ffffff;
 	font-weight: 500;
 	text-align: center;
+	font-size: 16px;
+	line-height: 22px;
 }
 
 .product-price {
@@ -1022,6 +1023,10 @@ a:active {
 	margin-bottom: 15px;
 }
 
+.map-contacts-item:last-child {
+	margin-bottom: 20px;
+}
+
 .contacts-info {
 	display: block;
 	margin: 5px 0;
@@ -1140,7 +1145,7 @@ a:active {
 
 .breadcrumbs {
 	margin: 0;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	padding: 0;
 	
 	list-style: none;
@@ -1149,18 +1154,18 @@ a:active {
 
 .breadcrumbs li {
 	display: inline-block;
-	margin-right: 10px;
+	margin-right: 7px;
 	
 	font-size: 14px;
 }
 
 .breadcrumbs a {
-	margin-right: 10px;
+	margin-right: 7px;
 }
 
 .main-title {
 	margin: 0;
-	margin-bottom: 25px;
+	margin-bottom: 30px;
 	
 	font-size: 35px;
 	line-height: 35px;
@@ -1168,7 +1173,7 @@ a:active {
 
 .filter {
 	min-width: 860px;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 	font-size: 0;
 }
 
@@ -1362,11 +1367,20 @@ a:active {
 .filter-bg input[type="checkbox"] + label{
 	display: inline-block;
 	position: relative;
-	margin-right: 15px;
+	margin-right: 20px;
 	padding-left: 30px;
 	
 	font-size: 16px;
 	cursor: pointer;
+}
+
+.filter-bg input[type="checkbox"] + label {
+	margin-right: 25px;
+}
+
+.filter-bg input[type="radio"]:last-of-type + label,
+.filter-bg input[type="checkbox"]:last-of-type + label{
+	margin-right: 0;
 }
 
 .filter-bg input[type="radio"] + label::after,
@@ -1447,7 +1461,7 @@ a:active {
 }
 
 .inner-page .product-list {
-	margin-bottom: 30px;
+	margin-bottom: 43px;
 }
 
 .paginator {
@@ -1457,16 +1471,19 @@ a:active {
 .pages {
 	float: right;
 	margin: 0;
+	margin-bottom: 10px;
 	padding: 0;
 	
 	color: #ffffff;
 	list-style: none;
+	font-size: 0;
 }
 
 .page {
 	display: inline-block;
 	width: 26px;
 	height: 26px;	
+	margin-right: 2px;
 	
 	border-radius: 50%;
 }
@@ -1517,6 +1534,10 @@ a:active {
 
 .page a:hover {
 	background: rgba(255, 255, 255, 0.2);
+}
+
+.inner-page .main-footer {
+	border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* popups */
