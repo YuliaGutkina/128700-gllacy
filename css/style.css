@@ -324,7 +324,7 @@ a:active {
 	margin-right: 0;
 }
 
-.header-button-li:hover .header-button,
+.header-button-li:not(.inactive):hover .header-button,
 .header-cart-full .header-button{
 	color: #343434;
 	
