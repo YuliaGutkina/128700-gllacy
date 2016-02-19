@@ -98,10 +98,7 @@ body {
 	margin: 0 auto;
 }
 
-.col-1,
-.col-2,
-.col-3,
-.col-4 {
+[class*="col-"] {
 	float:left; 
 	padding-left:1.1%; 
 	padding-right:1.1%;
@@ -808,6 +805,7 @@ a:active {
 	font-weight: bold;
 	
 	border-radius: 15px;
+	background-size: cover;
 }
 
 .promo-rasberry {
@@ -835,12 +833,16 @@ a:active {
 	float: right;
 }
 
+.product-list {
+	margin-bottom: 5px;
+}
+
 .product {
 	position: relative;
 	min-height: 300px;
 	margin-bottom: 15px;
 	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 }
 
 .product:hover {
@@ -1363,6 +1365,8 @@ a:active {
 	-moz-appearance: none;
 	-ms-appearance: none;
 	appearance: none;
+	
+	cursor: pointer;
 }
 
 .filter-sort-bg select::-ms-expand {
@@ -1471,7 +1475,7 @@ a:active {
 }
 
 .filter-bg input[type="checkbox"] + label {
-	margin-right: 25px;
+	margin-right: 20px;
 }
 
 .filter-bg input[type="radio"]:last-of-type + label,
