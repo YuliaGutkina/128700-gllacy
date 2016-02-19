@@ -1361,6 +1361,12 @@ a:active {
 	
 	-webkit-appearance: none;
 	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+}
+
+.filter-sort-bg select::-ms-expand {
+	display: none;
 }
 
 .filter-sort-bg::after {
