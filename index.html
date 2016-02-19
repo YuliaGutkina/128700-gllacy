@@ -341,19 +341,20 @@
 		</div>
 		<script>
 			var callOrderLink = document.querySelector(".map-contacts-btn");
-			var callOrderPopup = document.querySelector(".popup-callorder-wrap");
-			var callOrderClose = callOrderPopup.querySelector(".popup-closer");
-			var callOrderOverlay = callOrderPopup.querySelector(".popup-overlay");
-			var form = callOrderPopup.querySelector("form");
-			var userName = callOrderPopup.querySelector("[name=user-name]");
-			var email = callOrderPopup.querySelector("[name=email]");
-			var info = callOrderPopup.querySelector("[name=info]");
+			var callOrderWrap = document.querySelector(".popup-callorder-wrap");
+			var callOrderPopup = callOrderWrap.querySelector(".popup-callorder-content");
+			var callOrderClose = callOrderWrap.querySelector(".popup-closer");
+			var callOrderOverlay = callOrderWrap.querySelector(".popup-overlay");
+			var form = callOrderWrap.querySelector("form");
+			var userName = callOrderWrap.querySelector("[name=user-name]");
+			var email = callOrderWrap.querySelector("[name=email]");
+			var info = callOrderWrap.querySelector("[name=info]");
 			var userNameStorage = localStorage.getItem("userName");
 			var emailStorage = localStorage.getItem("email");
 			
 			callOrderLink.addEventListener("click", function(event) {
 				event.preventDefault();
-				callOrderPopup.classList.add("popup-wrap-show");
+				callOrderWrap.classList.add("popup-wrap-show");
 				
 				if (userNameStorage && emailStorage) {
 					userName.value = userNameStorage;
@@ -367,13 +368,13 @@
 			
 			callOrderClose.addEventListener("click", function(event) {
 				event.preventDefault();
-				callOrderPopup.classList.remove("popup-wrap-show");
+				callOrderWrap.classList.remove("popup-wrap-show");
 				callOrderPopup.classList.remove("popup-error");
 			});
 			
 			callOrderOverlay.addEventListener("click", function(event) {
 				event.preventDefault();
-				callOrderPopup.classList.remove("popup-wrap-show");
+				callOrderWrap.classList.remove("popup-wrap-show");
 				callOrderPopup.classList.remove("popup-error");
 			});
 			
@@ -391,8 +392,8 @@
 			
 			window.addEventListener("keydown", function(event) {
 				if (event.keyCode === 27) {
-					if (callOrderPopup.classList.contains("popup-wrap-show")) {
-						callOrderPopup.classList.remove("popup-wrap-show");
+					if (callOrderWrap.classList.contains("popup-wrap-show")) {
+						callOrderWrap.classList.remove("popup-wrap-show");
 						callOrderPopup.classList.remove("popup-error");
 					}
 				}
