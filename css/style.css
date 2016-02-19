@@ -1657,6 +1657,15 @@ a:active {
 
 /* popups */
 
+@keyframes appearance {
+  from  {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .popup-wrap {
 	display: none;
 	width: 100%;
@@ -1669,6 +1678,7 @@ a:active {
 
 .popup-wrap-show {
 	display: block;
+	animation: appearance 0.5s ease-in-out;
 }
 
 .popup-overlay {
