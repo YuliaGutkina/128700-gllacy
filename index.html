@@ -324,15 +324,15 @@
 				<h3 class="popup-title">Мы обязательно вам ответим!</h3>
 				<form action="https://echo.htmlacademy.ru" method="post" class="callorder-form clearfix">
 					<label class="text-input-label">
-						<input type="text" name="user-name" value="" class="text-input big-text-input" required>
+						<input type="text" name="user-name" value="" class="text-input big-text-input">
 						<span class="for-text-input">Как вас зовут?</span>
 					</label>
 					<label class="text-input-label">
-						<input type="email" name="email" value="" class="text-input big-text-input" required>
+						<input type="email" name="email" value="" class="text-input big-text-input">
 						<span class="for-text-input">Ваша почта для ответа?</span>
 					</label>
 					<label class="text-input-label textarea-label">
-						<textarea name="info" cols="30" rows="10" class="text-input big-text-input" required></textarea>
+						<textarea name="info" cols="30" rows="10" class="text-input big-text-input"></textarea>
 						<span class="for-text-input">Напишите что-нибудь...</span>
 					</label>
 					<button class="btn" type="submit">Отправить</button>
@@ -368,17 +368,21 @@
 			callOrderClose.addEventListener("click", function(event) {
 				event.preventDefault();
 				callOrderPopup.classList.remove("popup-wrap-show");
+				callOrderPopup.classList.remove("popup-error");
 			});
 			
 			callOrderOverlay.addEventListener("click", function(event) {
 				event.preventDefault();
 				callOrderPopup.classList.remove("popup-wrap-show");
+				callOrderPopup.classList.remove("popup-error");
 			});
 			
 			form.addEventListener("submit", function(event) {
 				if (!userName.value || !email.value || !info.value) {
 					event.preventDefault();
-					console.log("Нужно ввести данные"); 
+					callOrderPopup.classList.remove("popup-error");
+					callOrderPopup.offsetWidth = callOrderPopup.offsetWidth;
+					callOrderPopup.classList.add("popup-error");
 				} else {
 					localStorage.setItem("userName", userName.value);
 					localStorage.setItem("email", email.value);
@@ -389,6 +393,7 @@
 				if (event.keyCode === 27) {
 					if (callOrderPopup.classList.contains("popup-wrap-show")) {
 						callOrderPopup.classList.remove("popup-wrap-show");
+						callOrderPopup.classList.remove("popup-error");
 					}
 				}
 			});
