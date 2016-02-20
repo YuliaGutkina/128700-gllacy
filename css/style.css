@@ -793,6 +793,7 @@ a:active {
 }
 
 .promo {
+	position: relative;
 	min-height: 230px;
 	padding: 20px;
 	
@@ -821,11 +822,13 @@ a:active {
 }
 
 .promo p:last-of-type {
-	margin-bottom: 40px;
+	margin-bottom: 70px;
 }
 
 .promo-btn {
-	float: right;
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
 }
 
 .product-list {
