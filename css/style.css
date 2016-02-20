@@ -5,7 +5,8 @@
 .clearfix::before,
 .clearfix::after,
 .container::before,
-.container::after {
+.container::after,
+.row::after {
     content:'';
     display:table;
     clear:both;
@@ -123,12 +124,6 @@ body {
 .row {
 	margin-left: -1.1%;
 	margin-right: -1.1%;
-}
-
-.row::after {
-	content:'';
-    display:table;
-    clear:both;
 }
 
 a {
