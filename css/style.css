@@ -1,6 +1,6 @@
-/* div, section, article, nav, aside, main, h1, ul, img {
+div, section, article, nav, aside, main, h1, ul, img {
 	outline: 1px solid green;
-}  */ 
+}  
 
 .clearfix::before,
 .clearfix::after,
@@ -94,7 +94,7 @@ body {
 .container {
 	min-width: 900px;
 	max-width: 1200px;
-	padding: 0 2.1%;
+	padding: 0 2.3%;
 	margin: 0 auto;
 }
 
@@ -258,7 +258,7 @@ a:active {
 	width: 154px;
 	height: 64px;
 	margin-top: 10px;
-	margin-right: 5px;
+	margin-right: 10px;
 	margin-left: -5px;
 	line-height: 0;
 }
@@ -283,6 +283,10 @@ a:active {
 	vertical-align: top;
 	margin-right: 10px;
 	padding-bottom: 5px;
+}
+
+.header-button-li:last-child {
+	margin-right: 0;
 }
 
 .header-buttons .header-button{
@@ -372,6 +376,7 @@ a:active {
 }
 
 .header-login-links a {
+	display: block;
 	font-size: 13px;
 	line-height: 20px;
 }
@@ -765,11 +770,18 @@ a:active {
 .promo-btn {
 	position: absolute;
 	right: 20px;
-	bottom: 20px;
+	bottom: 25px;
 }
 
 .product-list {
-	margin-bottom: 5px;
+	margin-bottom: 10px;
+	font-size: 0;
+}
+
+.product-list .col-1 {
+	display: inline-block;
+	vertical-align: top;
+	float: none;
 }
 
 .product {
@@ -858,7 +870,7 @@ a:active {
 .features {
 	padding: 20px;
 	padding-top: 25px;
-	margin-bottom: 40px;
+	margin-bottom: 38px;
 	font-size: 0;
 	color: #323232;
 	background: #eee1c5 url('../img/bg-waffle.jpg') repeat 0 0;
@@ -921,7 +933,7 @@ a:active {
 
 .news-blog p {
 	margin-top: 0;
-	margin-bottom: 10px;
+	margin-bottom: 6px;
 }
 
 .post-title {
@@ -998,13 +1010,13 @@ a:active {
 	margin-bottom: 15px;
 }
 
-.map-contacts-item:last-child {
-	margin-bottom: 20px;
+.map-contacts-item:last-of-type{
+	margin-bottom: 30px;
 }
 
 .contacts-info {
 	display: block;
-	margin: 5px 0;
+	margin: 2px 0;
 	font-size: 18px;
 	line-height: 24px;
 	font-weight: bold;
@@ -1021,6 +1033,7 @@ a:active {
 
 .footer-social {
 	float: left;
+	width: 28%;
 	margin-right: 20px;
 	font-size: 0;
 }
@@ -1057,6 +1070,7 @@ a:active {
 
 .footer-copyright {
 	float: right;
+	max-width: 23%;
 }
 
 .footer-copyright-logo {
@@ -1070,7 +1084,12 @@ a:active {
 }
 
 .footer-info {
-	width: 360px;
+	width: 40%;
+	float: left;
+}
+
+.footer-info-list {
+	width: 340px;
 	margin: 0 auto;
 	font-size: 0;
 }
@@ -1078,8 +1097,8 @@ a:active {
 .footer-info a {
 	display: inline-block;
 	vertical-align: top;
-	width: 180px;
-	margin-bottom: 5px;
+	width: 170px;
+	margin-bottom: 10px;
 	font-size: 13px;
 	line-height: 13px;
 }
