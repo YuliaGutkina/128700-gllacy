@@ -94,7 +94,7 @@ body {
 .container {
 	min-width: 900px;
 	max-width: 1200px;
-	padding: 0 2.3%;
+	padding: 0 2.1%;
 	margin: 0 auto;
 }
 
@@ -743,7 +743,7 @@ a:active {
 .promo {
 	position: relative;
 	min-height: 230px;
-	padding: 20px;
+	padding: 15px 20px 20px 18px;
 	font-size: 18px;
 	font-weight: bold;
 	border-radius: 15px;
@@ -756,6 +756,10 @@ a:active {
 
 .promo-choco {
 	background: #583a35 url('../img/bg-choco.jpg') repeat 0 0;
+}
+
+.promo-choco .btn {
+	bottom: 34px;
 }
 
 .promo-title {
@@ -773,12 +777,13 @@ a:active {
 .promo-btn {
 	position: absolute;
 	right: 20px;
-	bottom: 25px;
+	bottom: 27px;
+	min-width: 168px;
 	margin-left: 25px;
 }
 
 .product-list {
-	margin-bottom: 10px;
+	margin-bottom: 4px;
 	font-size: 0;
 }
 
@@ -791,7 +796,7 @@ a:active {
 .product {
 	position: relative;
 	min-height: 300px;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 	padding-top: 10px;
 	padding-bottom: 5px;
 }
@@ -825,7 +830,7 @@ a:active {
 
 .product-price {
 	position: absolute;
-	bottom: 20px;
+	bottom: 18px;
 	left: 0;
 	font-weight: bold;
 	font-size: 45px;
@@ -864,16 +869,15 @@ a:active {
 .hit-product::after {
 	content: '';
 	position: absolute;
-	top: 10px;
-	left: 10px;
+	top: 8px;
+	left: 11px;
 	width: 61px;
 	height: 61px;
 	background: url('../img/hit.png') no-repeat 0 0;
 }
 
 .features {
-	padding: 20px;
-	padding-top: 25px;
+	padding: 25px 20px 15px 20px;
 	margin-bottom: 38px;
 	font-size: 0;
 	color: #323232;
@@ -892,7 +896,7 @@ a:active {
 .feature {
 	display: inline-block;
 	width: 48.8%;
-	margin-bottom: 5px;
+	margin-bottom: 11px;
 	vertical-align: top;
 	font-size: 16px;
 	line-height: 22px;
@@ -914,7 +918,7 @@ a:active {
 
 .feature-text {
 	margin: 0;
-	padding-top: 15px;	
+	padding-top: 10px;	
 	overflow: hidden;
 }
 
@@ -933,6 +937,7 @@ a:active {
 
 .news-blog {
 	background: #ffffff url('../img/bg-strawberry.jpg') no-repeat 100% 0;
+	background-size: cover;
 }
 
 .news-blog p {
@@ -999,6 +1004,7 @@ a:active {
 	margin-bottom: 15px;
 	background: url('../img/map.jpg') no-repeat center 0;
 	background-size: cover;
+	overflow: hidden;
 }
 
 .map-container {
@@ -1050,7 +1056,7 @@ a:active {
 
 .footer-social {
 	float: left;
-	width: 28%;
+	width: 27.4%;
 	margin-right: 20px;
 	font-size: 0;
 }
@@ -1115,7 +1121,7 @@ a:active {
 	display: inline-block;
 	vertical-align: top;
 	width: 170px;
-	margin-bottom: 10px;
+	margin-bottom: 8px;
 	font-size: 13px;
 	line-height: 13px;
 }
@@ -1166,7 +1172,7 @@ a:active {
 
 .main-title {
 	margin: 0;
-	margin-bottom: 30px;
+	margin-bottom: 28px;
 	font-size: 35px;
 	line-height: 35px;
 }
@@ -1190,7 +1196,7 @@ a:active {
 .filter-item {
 	display: inline-block;
 	margin-right: 15px;
-	vertical-align: bottom;
+	vertical-align: top;
 	font-size: 16px;
 }
 
@@ -1261,7 +1267,7 @@ a:active {
 }
 
 .filter-bg {
-	padding: 5px 15px;
+	padding: 7px 13px 5px 18px;
 	background: rgba(255, 255, 255, 0.2);
 	border-radius: 16px;
 }
@@ -1379,7 +1385,7 @@ a:active {
 .filter-bg input[type="checkbox"] + label{
 	display: inline-block;
 	position: relative;
-	margin-right: 20px;
+	margin-right: 19px;
 	padding-left: 30px;
 	font-size: 16px;
 	cursor: pointer;
@@ -1387,7 +1393,7 @@ a:active {
 }
 
 .filter-bg input[type="checkbox"] + label {
-	margin-right: 20px;
+	margin-right: 23px;
 }
 
 .filter-bg input[type="radio"]:last-of-type + label,
