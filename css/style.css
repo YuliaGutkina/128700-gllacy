@@ -906,20 +906,21 @@ a:active {
 	margin-right: 2.2%;
 }
 
-.feature-icon {
-	float: left;
-	height: 48px;
-	width: 48px;
-	margin-right: 10px;
-	font-size: 48px;
-	line-height: 48px;
-	border: none;
-}
-
 .feature-text {
+	position: relative;
 	margin: 0;
 	padding-top: 10px;	
-	overflow: hidden;
+	padding-left: 58px;
+}
+
+.feature-iconed::before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 48px;
+	height: 48px;
+	font-size: 48px;
+	line-height: 48px;
 }
 
 .news-list {
