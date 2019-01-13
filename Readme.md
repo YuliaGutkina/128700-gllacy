@@ -1,5 +1,5 @@
-# Project "Gllacy"
-[preview](http://yuliagutkina.github.io/gllacy/)
+# Project "Gllacy shop"
+Ice-cream shop: [preview](http://yuliagutkina.github.io/gllacy/)
 
 <a href="https://htmlacademy.ru/intensive"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/htmlcss/logo-for-github.svg"></a>
 
