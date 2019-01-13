@@ -1,5 +1,4 @@
 # Project "Gllacy shop"
-[preview](http://yuliagutkina.github.io/gllacy/)
 
 ---
 
